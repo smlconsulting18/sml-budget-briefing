@@ -1,0 +1,1168 @@
+<!DOCTYPE html>
+
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Federal Budget 2026–27 · Tax Reform Briefing | SML Bookkeeping &amp; Tax</title>
+<style>
+  :root {
+    --ink: #1a1f1a;
+    --ink-soft: #3a4239;
+    --paper: #f5f1e8;
+    --paper-warm: #ede7d6;
+    --paper-deep: #e3dcc6;
+    --forest: #2a3f2e;
+    --forest-deep: #1e2e22;
+    --gold: #a8854a;
+    --gold-deep: #876535;
+    --crimson: #8b3a3a;
+    --rule: #c9bf9f;
+    --rule-soft: #ddd3b3;
+  }
+
+- { margin: 0; padding: 0; box-sizing: border-box; }
+
+html {
+background: #f5f1e8;
+scroll-behavior: smooth;
+-webkit-text-size-adjust: 100%;
+}
+
+body {
+background: var(–paper);
+color: var(–ink);
+font-family: Georgia, “Iowan Old Style”, “Palatino Linotype”, Palatino, “Times New Roman”, serif;
+font-weight: 400;
+line-height: 1.75;
+-webkit-font-smoothing: antialiased;
+font-size: 16px;
+padding-top: 44px;
+}
+
+.mono {
+font-family: “SF Mono”, Menlo, Monaco, Consolas, “Courier New”, monospace;
+}
+
+/* === Watermark === */
+.watermark {
+position: fixed;
+inset: 0;
+pointer-events: none;
+z-index: 1;
+overflow: hidden;
+user-select: none;
+-webkit-user-select: none;
+}
+
+.watermark-inner {
+position: absolute;
+top: -30%;
+left: -30%;
+width: 160%;
+height: 160%;
+transform: rotate(-28deg);
+display: flex;
+flex-direction: column;
+gap: 90px;
+opacity: 0.5;
+}
+
+.watermark-row {
+display: flex;
+gap: 60px;
+white-space: nowrap;
+font-family: Georgia, “Times New Roman”, serif;
+font-style: italic;
+font-size: 14px;
+letter-spacing: 0.2em;
+color: rgba(42, 63, 46, 0.13);
+text-transform: uppercase;
+}
+
+.watermark-row span::after {
+content: “ · SML BOOKKEEPING & TAX · MAYBELL SUN · CONFIDENTIAL ·”;
+color: rgba(168, 133, 74, 0.15);
+}
+
+/* === Running Header === */
+.running-head {
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+z-index: 50;
+background: rgba(245, 241, 232, 0.95);
+backdrop-filter: blur(10px);
+-webkit-backdrop-filter: blur(10px);
+border-bottom: 1px solid var(–rule);
+height: 44px;
+display: flex;
+align-items: center;
+}
+
+.rh-inner {
+width: 100%;
+max-width: 720px;
+margin: 0 auto;
+padding: 0 5vw;
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 1rem;
+}
+
+.rh-firm {
+font-family: Georgia, “Iowan Old Style”, serif;
+font-style: italic;
+font-size: 14px;
+font-weight: 600;
+color: var(–forest-deep);
+white-space: nowrap;
+}
+
+.rh-badge {
+font-family: “SF Mono”, Menlo, monospace;
+font-size: 9px;
+font-weight: 700;
+letter-spacing: 0.25em;
+padding: 3px 8px;
+background: var(–crimson);
+color: var(–paper);
+border-radius: 1px;
+white-space: nowrap;
+}
+
+/* === Main container === */
+.page {
+position: relative;
+z-index: 2;
+max-width: 720px;
+margin: 0 auto;
+padding: 0 5vw 4rem;
+}
+
+/* === Masthead === */
+.masthead {
+padding: 2rem 0 1.5rem;
+border-bottom: 3px double var(–ink);
+text-align: center;
+}
+
+.masthead-meta {
+font-family: “SF Mono”, Menlo, monospace;
+font-size: 10px;
+letter-spacing: 0.25em;
+text-transform: uppercase;
+color: var(–ink-soft);
+padding-bottom: 1.5rem;
+border-bottom: 1px solid var(–rule-soft);
+margin-bottom: 1.5rem;
+display: flex;
+justify-content: center;
+gap: 0.5rem 1rem;
+flex-wrap: wrap;
+}
+
+.masthead-meta .dot {
+color: var(–gold);
+}
+
+.eyebrow {
+font-family: Georgia, serif;
+font-style: italic;
+font-size: 14px;
+letter-spacing: 0.05em;
+color: var(–gold-deep);
+margin-bottom: 0.6rem;
+}
+
+.masthead h1 {
+font-family: Georgia, “Iowan Old Style”, “Palatino Linotype”, serif;
+font-weight: 700;
+font-size: clamp(32px, 9vw, 52px);
+line-height: 1.1;
+letter-spacing: -0.01em;
+color: var(–forest-deep);
+margin: 0;
+}
+
+.masthead h1 .accent {
+color: var(–crimson);
+font-style: italic;
+font-weight: 600;
+}
+
+.subtitle {
+font-family: Georgia, “Iowan Old Style”, serif;
+font-style: italic;
+font-size: 17px;
+color: var(–ink-soft);
+margin-top: 1rem;
+letter-spacing: 0.02em;
+}
+
+.deck {
+margin: 2rem auto 0;
+font-size: 16px;
+line-height: 1.85;
+color: var(–ink-soft);
+text-align: left;
+padding: 0 0.5rem;
+}
+
+.deck::first-letter {
+font-family: Georgia, serif;
+font-size: 1.8em;
+color: var(–crimson);
+font-weight: 700;
+float: left;
+line-height: 0.9;
+margin: 0.1em 0.08em 0 0;
+}
+
+/* === Hero Callout === */
+.hero-callout {
+margin: 2.5rem 0;
+padding: 1.8rem 1.5rem;
+background: var(–forest-deep);
+color: var(–paper);
+border-radius: 2px;
+position: relative;
+overflow: hidden;
+}
+
+.hero-callout::before {
+content: “”;
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+height: 3px;
+background: linear-gradient(90deg, var(–gold), var(–gold-deep), var(–gold));
+}
+
+.hero-label {
+font-family: “SF Mono”, Menlo, monospace;
+font-size: 10px;
+letter-spacing: 0.3em;
+text-transform: uppercase;
+color: var(–gold);
+margin-bottom: 0.8rem;
+}
+
+.hero-callout p {
+font-size: 17px;
+line-height: 1.65;
+font-weight: 400;
+}
+
+.hero-callout strong {
+color: var(–gold);
+font-weight: 600;
+}
+
+/* === TOC === */
+.toc {
+margin: 3rem 0;
+padding: 1.8rem 0;
+border-top: 1px solid var(–rule-soft);
+border-bottom: 1px solid var(–rule-soft);
+}
+
+.toc-label {
+font-family: “SF Mono”, Menlo, monospace;
+font-size: 10px;
+letter-spacing: 0.3em;
+text-transform: uppercase;
+color: var(–gold-deep);
+text-align: center;
+margin-bottom: 1.5rem;
+}
+
+.toc-item {
+display: flex;
+align-items: baseline;
+gap: 1rem;
+padding: 0.7rem 0;
+border-bottom: 1px dotted var(–rule);
+text-decoration: none;
+color: var(–ink);
+}
+
+.toc-item:last-child {
+border-bottom: none;
+}
+
+.toc-num {
+font-family: Georgia, serif;
+font-style: italic;
+font-size: 16px;
+color: var(–gold-deep);
+font-weight: 600;
+min-width: 28px;
+}
+
+.toc-title {
+font-size: 15px;
+font-weight: 500;
+}
+
+/* === Section === */
+section {
+margin: 4rem 0 3rem;
+scroll-margin-top: 60px;
+}
+
+.section-header {
+margin-bottom: 2rem;
+position: relative;
+}
+
+.section-tag {
+font-family: “SF Mono”, Menlo, monospace;
+font-size: 10px;
+letter-spacing: 0.25em;
+text-transform: uppercase;
+color: var(–crimson);
+margin-bottom: 0.8rem;
+display: flex;
+align-items: center;
+gap: 0.8rem;
+}
+
+.section-tag::before {
+content: “”;
+width: 24px;
+height: 1px;
+background: var(–crimson);
+}
+
+h2 {
+font-family: Georgia, “Iowan Old Style”, “Palatino Linotype”, serif;
+font-weight: 700;
+font-size: clamp(24px, 6.5vw, 32px);
+color: var(–forest-deep);
+line-height: 1.2;
+margin-bottom: 0.5rem;
+letter-spacing: -0.01em;
+}
+
+h2 .sub {
+display: block;
+font-family: Georgia, serif;
+font-style: italic;
+font-size: 16px;
+font-weight: 400;
+color: var(–ink-soft);
+margin-top: 0.4rem;
+letter-spacing: 0.01em;
+}
+
+h3 {
+font-family: Georgia, “Iowan Old Style”, serif;
+font-weight: 600;
+font-size: 19px;
+color: var(–forest);
+margin: 1.8rem 0 0.8rem;
+padding-bottom: 0.5rem;
+border-bottom: 1px solid var(–rule);
+}
+
+h4 {
+font-family: Georgia, serif;
+font-weight: 700;
+font-size: 16px;
+color: var(–forest-deep);
+margin: 1.2rem 0 0.6rem;
+}
+
+p {
+margin-bottom: 1rem;
+font-size: 16px;
+line-height: 1.75;
+}
+
+strong {
+font-weight: 700;
+color: var(–forest-deep);
+}
+
+em {
+font-style: italic;
+color: var(–gold-deep);
+}
+
+/* === Four buckets === */
+.buckets-intro {
+margin: 1.5rem 0 2rem;
+padding: 1rem 1.2rem;
+background: var(–paper-warm);
+border-left: 3px solid var(–gold);
+font-size: 14px;
+font-style: italic;
+color: var(–ink-soft);
+line-height: 1.65;
+}
+
+.bucket {
+background: var(–paper-warm);
+padding: 1.5rem 1.3rem;
+margin: 1.2rem 0;
+border-top: 4px solid var(–rule);
+border-radius: 2px;
+}
+
+.bucket-1 { border-top-color: #5a7a4f; }
+.bucket-2 { border-top-color: var(–gold); }
+.bucket-3 { border-top-color: var(–crimson); }
+.bucket-4 { border-top-color: var(–forest-deep); }
+
+.bucket-num {
+font-family: Georgia, serif;
+font-style: italic;
+font-size: 12px;
+color: var(–gold-deep);
+letter-spacing: 0.1em;
+margin-bottom: 0.3rem;
+}
+
+.bucket-title {
+font-family: Georgia, “Iowan Old Style”, serif;
+font-weight: 700;
+font-size: 18px;
+color: var(–forest-deep);
+margin-bottom: 0.3rem;
+line-height: 1.3;
+}
+
+.bucket-date {
+font-family: “SF Mono”, Menlo, monospace;
+font-size: 11px;
+color: var(–ink-soft);
+margin-bottom: 0.8rem;
+}
+
+.bucket-status {
+display: inline-block;
+padding: 3px 9px;
+font-family: “SF Mono”, Menlo, monospace;
+font-size: 10px;
+letter-spacing: 0.15em;
+text-transform: uppercase;
+margin-bottom: 0.8rem;
+border-radius: 2px;
+}
+
+.status-safe { background: #5a7a4f; color: var(–paper); }
+.status-warn { background: var(–gold); color: var(–paper); }
+.status-alert { background: var(–crimson); color: var(–paper); }
+.status-opp { background: var(–forest-deep); color: var(–gold); }
+
+.bucket p {
+font-size: 15px;
+line-height: 1.7;
+margin-bottom: 0;
+}
+
+/* === Example === */
+.example {
+margin: 1.8rem 0;
+padding: 1.5rem 1.3rem 1.2rem;
+background: linear-gradient(to bottom, var(–paper-warm), var(–paper-deep));
+border-radius: 2px;
+position: relative;
+}
+
+.example::before {
+content: “WORKED EXAMPLE”;
+position: absolute;
+top: -10px;
+left: 16px;
+background: var(–forest-deep);
+color: var(–gold);
+padding: 4px 12px;
+font-family: “SF Mono”, Menlo, monospace;
+font-size: 9px;
+letter-spacing: 0.25em;
+border-radius: 1px;
+}
+
+.example h4 {
+margin: 0.5rem 0 0.7rem;
+color: var(–crimson);
+font-size: 16px;
+}
+
+.example p {
+font-size: 15px;
+line-height: 1.7;
+}
+
+/* === Table === */
+.table-wrap {
+margin: 1.5rem 0;
+background: var(–paper-warm);
+padding: 1.2rem;
+border-radius: 2px;
+overflow-x: auto;
+}
+
+.table-label {
+font-family: “SF Mono”, Menlo, monospace;
+font-size: 10px;
+letter-spacing: 0.25em;
+text-transform: uppercase;
+color: var(–gold-deep);
+margin-bottom: 0.8rem;
+padding-bottom: 0.6rem;
+border-bottom: 1px solid var(–rule);
+}
+
+table {
+width: 100%;
+border-collapse: collapse;
+font-size: 13px;
+}
+
+th {
+text-align: left;
+padding: 0.7rem 0.5rem;
+background: var(–forest-deep);
+color: var(–gold);
+font-family: Georgia, serif;
+font-weight: 600;
+font-size: 12px;
+letter-spacing: 0.02em;
+}
+
+td {
+padding: 0.7rem 0.5rem;
+border-bottom: 1px solid var(–rule-soft);
+line-height: 1.5;
+}
+
+tr:last-child td { border-bottom: none; }
+
+.row-alert {
+background: rgba(139, 58, 58, 0.08);
+}
+.row-alert td {
+font-weight: 600;
+}
+
+/* === Action callout === */
+.action {
+margin: 2rem 0;
+padding: 1.5rem 1.3rem;
+background: var(–forest-deep);
+color: var(–paper);
+border-radius: 2px;
+position: relative;
+}
+
+.action::before {
+content: “✦”;
+position: absolute;
+top: 0.8rem;
+right: 1.2rem;
+color: var(–gold);
+font-size: 16px;
+}
+
+.action-label {
+font-family: “SF Mono”, Menlo, monospace;
+font-size: 10px;
+letter-spacing: 0.3em;
+text-transform: uppercase;
+color: var(–gold);
+margin-bottom: 0.6rem;
+}
+
+.action h3 {
+color: var(–paper);
+border: none;
+padding: 0;
+margin: 0 0 0.7rem;
+font-size: 19px;
+}
+
+.action p {
+color: var(–paper-warm);
+margin-bottom: 0.6rem;
+font-size: 15px;
+}
+
+/* === Pull quote === */
+.pullquote {
+margin: 3rem 0;
+padding: 1.8rem 0;
+border-top: 1px solid var(–rule);
+border-bottom: 1px solid var(–rule);
+text-align: center;
+}
+
+.pullquote::before {
+content: “❝”;
+display: block;
+font-family: Georgia, serif;
+font-size: 36px;
+color: var(–gold);
+line-height: 0.5;
+margin-bottom: 0.5rem;
+}
+
+.pullquote p {
+font-family: Georgia, “Iowan Old Style”, serif;
+font-style: italic;
+font-size: 18px;
+line-height: 1.5;
+color: var(–forest-deep);
+}
+
+/* === Two col card === */
+.two-card { margin: 1.5rem 0; }
+
+.card {
+padding: 1.3rem 1.2rem;
+margin: 1rem 0;
+background: var(–paper-warm);
+border-top: 3px solid var(–gold);
+border-radius: 2px;
+}
+
+.card.alt { border-top-color: var(–crimson); }
+
+.card h4 {
+margin-top: 0;
+font-size: 16px;
+}
+
+.card p {
+font-size: 15px;
+line-height: 1.65;
+margin-bottom: 0;
+}
+
+/* === Disclaimer === */
+.disclaimer {
+margin: 4rem 0 2rem;
+padding: 1.5rem;
+background: var(–paper-deep);
+border-left: 3px solid var(–crimson);
+font-size: 13px;
+color: var(–ink-soft);
+line-height: 1.7;
+}
+
+.disclaimer-label {
+font-family: “SF Mono”, Menlo, monospace;
+font-size: 10px;
+letter-spacing: 0.25em;
+text-transform: uppercase;
+color: var(–crimson);
+margin-bottom: 0.6rem;
+font-weight: 600;
+}
+
+/* === Footer === */
+footer {
+margin-top: 4rem;
+padding-top: 2.5rem;
+border-top: 3px double var(–ink);
+text-align: center;
+}
+
+.footer-ornament {
+color: var(–gold);
+font-size: 18px;
+letter-spacing: 0.8rem;
+margin: 1rem 0 1.5rem;
+}
+
+.firm-name {
+font-family: Georgia, “Iowan Old Style”, serif;
+font-style: italic;
+font-size: 22px;
+color: var(–forest-deep);
+margin-bottom: 0.5rem;
+letter-spacing: 0.02em;
+}
+
+.footer-divider {
+width: 50px;
+height: 1px;
+background: var(–gold);
+margin: 1.5rem auto;
+opacity: 0.6;
+}
+
+.principal-name {
+font-family: Georgia, “Iowan Old Style”, serif;
+font-size: 17px;
+font-weight: 600;
+color: var(–forest-deep);
+margin-bottom: 0.3rem;
+}
+
+.principal-name .creds {
+font-family: Georgia, serif;
+font-style: italic;
+color: var(–gold-deep);
+font-weight: 500;
+}
+
+.principal-title {
+font-family: Georgia, serif;
+font-style: italic;
+font-size: 14px;
+color: var(–ink-soft);
+margin-bottom: 1.5rem;
+}
+
+.contact-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 1.2rem 1rem;
+max-width: 480px;
+margin: 0 auto 1.5rem;
+padding: 1.2rem 0;
+border-top: 1px solid var(–rule-soft);
+border-bottom: 1px solid var(–rule-soft);
+}
+
+.contact-block { text-align: center; }
+
+.contact-label {
+font-family: “SF Mono”, Menlo, monospace;
+font-size: 9px;
+letter-spacing: 0.2em;
+text-transform: uppercase;
+color: var(–gold-deep);
+margin-bottom: 0.3rem;
+}
+
+.contact-block p {
+font-family: Georgia, serif;
+font-size: 13px;
+color: var(–ink);
+margin: 0;
+line-height: 1.4;
+word-break: break-all;
+}
+
+.contact-block a {
+color: var(–ink);
+text-decoration: none;
+border-bottom: 1px dotted var(–rule);
+}
+
+.address {
+font-family: Georgia, serif;
+font-style: italic;
+font-size: 14px;
+color: var(–ink-soft);
+margin: 0 auto 1rem;
+letter-spacing: 0.02em;
+max-width: 90%;
+}
+
+.footer-meta {
+font-family: “SF Mono”, Menlo, monospace;
+font-size: 10px;
+letter-spacing: 0.2em;
+color: var(–ink-soft);
+text-transform: uppercase;
+opacity: 0.6;
+}
+
+/* === Tablet and up === */
+@media (min-width: 600px) {
+body { font-size: 17px; }
+p { font-size: 17px; }
+.deck { font-size: 17px; }
+.hero-callout { padding: 2rem 2rem; }
+.hero-callout p { font-size: 18px; }
+.bucket { padding: 1.8rem; }
+.example { padding: 1.8rem; }
+table { font-size: 14px; }
+th, td { padding: 0.85rem 0.8rem; }
+}
+</style>
+
+</head>
+<body>
+
+<!-- WATERMARK -->
+
+<div class="watermark" aria-hidden="true">
+  <div class="watermark-inner">
+    <div class="watermark-row"><span>SML</span></div>
+    <div class="watermark-row"><span>SML</span></div>
+    <div class="watermark-row"><span>SML</span></div>
+    <div class="watermark-row"><span>SML</span></div>
+    <div class="watermark-row"><span>SML</span></div>
+    <div class="watermark-row"><span>SML</span></div>
+    <div class="watermark-row"><span>SML</span></div>
+    <div class="watermark-row"><span>SML</span></div>
+    <div class="watermark-row"><span>SML</span></div>
+    <div class="watermark-row"><span>SML</span></div>
+    <div class="watermark-row"><span>SML</span></div>
+    <div class="watermark-row"><span>SML</span></div>
+    <div class="watermark-row"><span>SML</span></div>
+    <div class="watermark-row"><span>SML</span></div>
+    <div class="watermark-row"><span>SML</span></div>
+  </div>
+</div>
+
+<!-- RUNNING HEAD -->
+
+<div class="running-head">
+  <div class="rh-inner">
+    <span class="rh-firm">SML Bookkeeping &amp; Tax</span>
+    <span class="rh-badge">CONFIDENTIAL</span>
+  </div>
+</div>
+
+<div class="page">
+
+<!-- MASTHEAD -->
+
+<header class="masthead">
+  <div class="masthead-meta">
+    <span>VOL. I · NO. 01</span>
+    <span class="dot">❦</span>
+    <span>Client Briefing</span>
+    <span class="dot">❦</span>
+    <span>Melbourne 2026</span>
+  </div>
+  <div class="eyebrow">Federal Budget · 2026–27</div>
+  <h1>A Reckoning<span class="accent"> · </span>Tax Reform Unpacked</h1>
+  <div class="subtitle">What the May 2026 Budget Means for Australian Investors</div>
+  <div class="deck">
+    On 12 May 2026, the Federal Government handed down the most ambitious package of tax reform in twenty-six years. Negative gearing, the 50% CGT discount, and discretionary trusts — three pillars of middle-Australia investing for a generation — will be substantially rewritten from 1 July 2027. This briefing distils what changes, when, who is affected, and what to do about it.
+  </div>
+</header>
+
+<!-- HERO CALLOUT -->
+
+<div class="hero-callout">
+  <div class="hero-label">The Headline</div>
+  <p>
+    If you hold an investment property, operate through a family trust, or sit on long-term capital gains, this Budget materially reshapes your next decade. The two dates that matter most are <strong>7:30 PM AEST, 12 May 2026</strong> (when grandfathering of existing assets cut off) and <strong>1 July 2027</strong> (when the new rules switch on).
+  </p>
+</div>
+
+<!-- TOC -->
+
+<nav class="toc">
+  <div class="toc-label">In This Briefing</div>
+  <a href="#sec1" class="toc-item"><span class="toc-num">i</span><span class="toc-title">Negative Gearing — The Four-Bucket Framework</span></a>
+  <a href="#sec2" class="toc-item"><span class="toc-num">ii</span><span class="toc-title">The End of the 50% CGT Discount</span></a>
+  <a href="#sec3" class="toc-item"><span class="toc-num">iii</span><span class="toc-title">Family Trusts — 30% Minimum Tax &amp; the Exit Window</span></a>
+  <a href="#sec4" class="toc-item"><span class="toc-num">iv</span><span class="toc-title">Personal Income Tax — Cuts &amp; the Instant Deduction</span></a>
+  <a href="#sec5" class="toc-item"><span class="toc-num">v</span><span class="toc-title">Small Business — Permanent IAWO &amp; Loss Carry-Back</span></a>
+  <a href="#sec6" class="toc-item"><span class="toc-num">vi</span><span class="toc-title">Valuations — Why 1 July 2027 Demands One</span></a>
+  <a href="#sec7" class="toc-item"><span class="toc-num">vii</span><span class="toc-title">Client Triage — Who Should Act, and When</span></a>
+</nav>
+
+<!-- SECTION 1 -->
+
+<section id="sec1">
+  <div class="section-header">
+    <div class="section-tag">Part One · Negative Gearing</div>
+    <h2>The Four-Bucket Framework<span class="sub">How acquisition date now determines everything</span></h2>
+  </div>
+  <p>The new rules sort investors into four categories based on <strong>when the property was acquired</strong>. The treatment of each could not be more different. Bucket I is untouched; Bucket IV is, paradoxically, advantaged; Buckets II and III face a graduated tightening.</p>
+  <div class="buckets-intro">The pivotal moment is <strong>7:30 PM AEST on 12 May 2026</strong> — "Budget night". Anything held or under signed contract before that timestamp enjoys full grandfathering.</div>
+
+  <div class="bucket bucket-1">
+    <div class="bucket-num">Bucket I</div>
+    <div class="bucket-title">Existing Holdings</div>
+    <div class="bucket-date">Acquired ≤ 12 May 2026 (7:30 PM)</div>
+    <span class="bucket-status status-safe">Fully Grandfathered</span>
+    <p>All investment properties held or under contract before Budget night. <strong>Rules unchanged.</strong> Rental losses continue to be deductible against any income. Retain contracts of sale and settlement statements to evidence grandfathering status.</p>
+  </div>
+
+  <div class="bucket bucket-2">
+    <div class="bucket-num">Bucket II</div>
+    <div class="bucket-title">Transitional</div>
+    <div class="bucket-date">13 May 2026 — 30 June 2027</div>
+    <span class="bucket-status status-warn">One-Year Window</span>
+    <p>Until 30 June 2027, losses remain deductible against any income. From 1 July 2027, <strong>losses can only offset other residential investment income</strong>, with unused amounts carried forward. Cash-flow stress-testing for FY28 onwards is essential.</p>
+  </div>
+
+  <div class="bucket bucket-3">
+    <div class="bucket-num">Bucket III</div>
+    <div class="bucket-title">Established Property</div>
+    <div class="bucket-date">Acquired ≥ 1 July 2027</div>
+    <span class="bucket-status status-alert">Significantly Restricted</span>
+    <p>Second-hand residential property purchased after 1 July 2027: <strong>losses may only offset other residential property income</strong>, never wages or salary. The classic "buy an inner-suburbs renovator and gear it against your salary" play is closed.</p>
+  </div>
+
+  <div class="bucket bucket-4">
+    <div class="bucket-num">Bucket IV</div>
+    <div class="bucket-title">New Builds</div>
+    <div class="bucket-date">Acquired ≥ 1 July 2027</div>
+    <span class="bucket-status status-opp">Fully Preserved</span>
+    <p>House-and-land packages, off-the-plan apartments, and knock-down-rebuilds that add dwellings. <strong>Negative gearing fully retained.</strong> Critically, the "new build" status transfers <em>only once</em> — the next investor purchaser inherits established-property treatment.</p>
+  </div>
+
+  <div class="example">
+    <h4>Two Roads for Chen, the Specialist Surgeon</h4>
+    <p>Chen earns $200,000 (top marginal rate, 47%). In September 2027 he is weighing a residential investment expected to produce a $35,000 annual loss.</p>
+    <p><strong>Option A — established property (Bucket III):</strong> the $35,000 loss cannot offset his salary. Refund in year one: <strong>nil</strong>; the loss carries forward indefinitely.<br><strong>Option B — off-the-plan (Bucket IV):</strong> $35,000 × 47% = <strong>$16,450 refund</strong>, every year.</p>
+    <p>Over a ten-year hold, the negative-gearing advantage alone is worth <strong>$164,500</strong> — before any capital-gains differential.</p>
+  </div>
+</section>
+
+<!-- SECTION 2 -->
+
+<section id="sec2">
+  <div class="section-header">
+    <div class="section-tag">Part Two · Capital Gains Tax</div>
+    <h2>The End of the 50% Discount<span class="sub">Inflation indexation returns, with a floor</span></h2>
+  </div>
+  <p>The <strong>50% CGT discount</strong> — a fixture of Australian tax since 1999 — is repealed for individuals, trusts, and partnerships alike. In its place: <em>cost-base indexation</em> (only the real gain above inflation is taxable) coupled with a <strong>30% minimum tax rate</strong>. The effect is sharply distributional. Long-held, slow-growing assets in inflationary periods may pay less; short-held, fast-growing assets pay materially more.</p>
+
+  <div class="table-wrap">
+    <div class="table-label">A Tale of Two Sales</div>
+    <p style="font-size: 14px; margin-bottom: 0.8rem;"><strong>Ten-year hold · Nominal gain $800,000 · Salary $200,000</strong></p>
+    <table>
+      <thead>
+        <tr><th>Regime</th><th>Taxable Gain</th><th>Tax Payable</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Old (50% discount)</td><td>$400,000</td><td>$188,000</td></tr>
+        <tr class="row-alert"><td>New (indexation + 30% floor)</td><td>$500,000 real</td><td>$240,000</td></tr>
+        <tr><td colspan="2"><strong>Additional tax</strong></td><td><strong style="color: var(--crimson);">$52,000</strong></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="two-card">
+    <div class="card">
+      <h4>Modest Winners</h4>
+      <p>Assets held for fifteen-to-twenty years through periods of meaningful inflation. The indexed cost base can lift well above the original purchase price, materially shrinking the real gain. The 30% floor still applies, but the win can be real.</p>
+    </div>
+    <div class="card alt">
+      <h4>The Clear Losers</h4>
+      <p>Assets that have grown faster than inflation — the typical Melbourne or Sydney capital-city property of the last decade. Real gain ≈ nominal gain. The 50% shield is gone; the 30% floor caps it on the downside but not the upside.</p>
+    </div>
+  </div>
+
+  <div class="action">
+    <div class="action-label">The Election</div>
+    <h3>New-Build Holders May Choose</h3>
+    <p>Investors who acquire a <em>new build</em> after 1 July 2027 can elect, at sale, between the old <strong>50% discount</strong> and the new indexation regime — whichever is more favourable. This sits on top of the negative-gearing preservation, creating a meaningful two-fold advantage for new construction.</p>
+  </div>
+
+  <p><strong>The dividing line:</strong> reform applies only to <strong>gains accruing after 1 July 2027</strong>. Gains accumulated before that date retain the 50% discount. The practical implication: most existing assets need a <strong>1 July 2027 market valuation</strong> to draw the line cleanly. See Part Six.</p>
+</section>
+
+<!-- SECTION 3 -->
+
+<section id="sec3">
+  <div class="section-header">
+    <div class="section-tag">Part Three · Discretionary Trusts</div>
+    <h2>30% Minimum Tax &amp; the Exit Window<span class="sub">The end of income splitting as we know it</span></h2>
+  </div>
+  <p>From 1 July 2028, distributions from discretionary trusts will be subject to a <strong>minimum 30% tax rate</strong>. The bedrock strategy of streaming income to lower-rate family members — adult children at university, a non-working spouse, retired parents — is, in most cases, neutralised.</p>
+
+  <h3>Two Important Exemptions</h3>
+
+  <div class="two-card">
+    <div class="card">
+      <h4>Income-Support Recipients</h4>
+      <p>Distributions to beneficiaries on Age Pension, Disability Support Pension, or comparable income support are <strong>exempt from the 30% floor</strong> and remain taxable at the recipient's marginal rate. Families with pensioned parents retain partial splitting benefits — though Centrelink income tests must be considered.</p>
+    </div>
+    <div class="card">
+      <h4>Small Business CGT Concessions</h4>
+      <p>The Division 152 concessions — 15-year exemption, 50% active-asset reduction, retirement exemption, rollover — are <strong>fully preserved</strong>. Owner-operators approaching retirement retain access to a near-complete CGT exemption on the sale of their business.</p>
+    </div>
+  </div>
+
+  <div class="example">
+    <h4>The Walker Family Trust</h4>
+    <p>Annual trust income of $300,000. Current distributions: husband $80k (alongside $200k salary), wife $80k (homemaker), university-aged son $40k, pensioned mother $30k, undistributed $70k.</p>
+    <p><strong>FY28 under old rules:</strong> approximately <strong>$50,000</strong> total tax.<br><strong>FY29 under new rules (no restructure):</strong> approximately <strong style="color: var(--crimson);">$18,000 of additional tax per year</strong>, indefinitely.</p>
+  </div>
+
+  <div class="action">
+    <div class="action-label">The Golden Window</div>
+    <h3>1 July 2027 — 30 June 2030</h3>
+    <p>A three-year window of <strong>CGT and income-tax rollover relief</strong> permits restructuring from a discretionary trust into a Pty Ltd company structure with <strong>no immediate tax event</strong>.</p>
+    <p>Inside the new corporate vehicle, profits are taxed at 25% (base rate entity) and distributed as <strong>fully franked dividends</strong>. Lower-income family shareholders, through franking credits, can achieve <em>effective tax rates below 30%</em> — in some cases producing a cash refund from the ATO.</p>
+    <p><strong style="color: var(--gold);">The warning:</strong> miss this window and a future restructure crystallises every dollar of accumulated unrealised gain at once. For a mid-sized family trust, the immediate CGT bill could easily exceed <strong>$200,000</strong>.</p>
+  </div>
+
+  <div class="pullquote">
+    <p>Earlier is not always better.<br>Whether, when, and how to restructure<br>is a three-way trade-off — assets, family, retirement horizon.</p>
+  </div>
+</section>
+
+<!-- SECTION 4 -->
+
+<section id="sec4">
+  <div class="section-header">
+    <div class="section-tag">Part Four · Personal Income Tax</div>
+    <h2>Cuts &amp; the Instant Deduction<span class="sub">Modest relief for the wage earner</span></h2>
+  </div>
+  <p>Against the three big repeals above, the personal income tax side of the Budget is unambiguously a giveaway. Four measures matter.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>Measure</th><th>Effective</th><th>Headline Benefit</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Second bracket 16% → 15%</strong></td><td>1 Jul 2026</td><td>Up to $268 p.a. per taxpayer</td></tr>
+        <tr><td><strong>Working Australians Tax Offset</strong></td><td>FY28</td><td>$250 permanent offset, 13M workers</td></tr>
+        <tr><td><strong>$1,000 Instant Deduction</strong></td><td>FY27</td><td>No-receipt work-expense claim</td></tr>
+        <tr><td><strong>Medicare levy thresholds</strong></td><td>FY26</td><td>+2.9% indexation</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>The Hidden Value in the $1,000 Instant Deduction</h3>
+  <p>From FY27, employees and sole traders may claim up to $1,000 of work-related expenses <strong>without retaining receipts</strong>. The catch: it is an alternative to, not an addition to, the traditional substantiated deduction.</p>
+
+  <div class="example">
+    <h4>Who Actually Benefits</h4>
+    <p><strong>Sarah, registered nurse.</strong> Historical work-expense claims of $200 per year. Under the new regime she automatically receives the $1,000 deduction: additional $800 × 32.5% marginal rate = <strong>$260 refund</strong>, zero administrative burden.</p>
+    <p><strong>James, IT consultant.</strong> Substantiated claims of $3,500 per year (home office, professional development, devices). Continues claiming with substantiation. The $1,000 instant deduction is irrelevant; <strong>no additional benefit</strong>.</p>
+  </div>
+</section>
+
+<!-- SECTION 5 -->
+
+<section id="sec5">
+  <div class="section-header">
+    <div class="section-tag">Part Five · Small Business</div>
+    <h2>Permanent IAWO &amp; Loss Carry-Back<span class="sub">Two measures with real cash-flow impact</span></h2>
+  </div>
+
+  <h3>$20,000 Instant Asset Write-Off — Made Permanent</h3>
+  <p>Businesses with turnover under $10 million can permanently and immediately write off depreciable assets costing less than $20,000 each. The annual cliffhanger over whether the measure will be extended is finally over.</p>
+
+  <div class="example">
+    <h4>Espresso Capital Expenditure</h4>
+    <p>A café with $800k annual turnover purchases an $18,000 commercial espresso machine in August 2026. The full $18,000 is deductible in year one. At the 25% base-rate company tax, the cash saving is <strong>$4,500 in the year of acquisition</strong> — versus depreciation over six-to-eight years under the standard regime.</p>
+  </div>
+
+  <h3>Loss Carry-Back — Cash Out of Past Tax Paid</h3>
+  <p>Companies with turnover up to $1 billion may apply current-year losses against tax paid in the preceding two income years, generating a <strong>cash refund</strong>. Approximately 85,000 companies — overwhelmingly SMEs — directly benefit.</p>
+
+  <div class="example">
+    <h4>Cash Flow When It Matters</h4>
+    <p>A retail company earned $200,000 and paid $50,000 in tax in FY25. In FY27, conditions deteriorate and it posts a $150,000 loss.</p>
+    <p><strong>Old rule:</strong> the loss is carried forward, deductible only when (and if) future profits return.<br><strong>New rule:</strong> $150,000 carried back against FY25 tax → <strong>immediate $37,500 cash refund</strong> from the ATO.</p>
+  </div>
+</section>
+
+<!-- SECTION 6 -->
+
+<section id="sec6">
+  <div class="section-header">
+    <div class="section-tag">Part Six · The Valuation Imperative</div>
+    <h2>Why 1 July 2027 Demands a Valuation<span class="sub">Drawing the line between old and new gain</span></h2>
+  </div>
+  <p>Because the CGT reform applies only to gains accruing <strong>after 1 July 2027</strong>, every existing asset enters a <em>hybrid</em> period — pre-cut-off gain retains the 50% discount, post-cut-off gain runs under the new indexation regime. To split the gain cleanly when the asset is eventually sold, the market value <strong>at 1 July 2027</strong> must be established with evidence.</p>
+
+  <div class="table-wrap">
+    <div class="table-label">ATO-Compliant Valuation Guide</div>
+    <table>
+      <thead>
+        <tr><th>Asset Type</th><th>Qualified Valuer</th><th>Typical Fee</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Residential investment property</td><td>CPV / API</td><td>$800 – $2,500</td></tr>
+        <tr><td>Commercial or industrial property</td><td>Commercial CPV</td><td>$2,500 – $5,000</td></tr>
+        <tr><td>Private business equity</td><td>Business valuer</td><td>$5,000+</td></tr>
+        <tr><td>Listed shares</td><td>Closing price (no valuer)</td><td>—</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="action">
+    <div class="action-label">A Word on Quality</div>
+    <h3>What the ATO Will Not Accept</h3>
+    <p><strong>Agent appraisals, bank valuations, and self-prepared estimates</strong> are not acceptable for CGT purposes. The ATO requires an independent valuer with <strong>CPV</strong>, <strong>API</strong>, or <strong>RICS</strong> credentials, and the report must explicitly state it is prepared "<em>for CGT purposes</em>".</p>
+    <p>The valuation fee itself is <strong>added to the cost base</strong>, providing partial recovery against eventual CGT.</p>
+  </div>
+</section>
+
+<!-- SECTION 7 -->
+
+<section id="sec7">
+  <div class="section-header">
+    <div class="section-tag">Part Seven · Action Plan</div>
+    <h2>Client Triage<span class="sub">Who should act, and when</span></h2>
+  </div>
+  <p>Not every client needs to move now. The table below sets out the relevant client profiles, the operative impact, and the first step we would recommend.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>Profile</th><th>Impact</th><th>First Step</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Existing investment property holder</td><td>None</td><td>Archive grandfathering evidence</td></tr>
+        <tr><td>Buying established property in FY27</td><td>One-year window</td><td>FY28+ cash-flow modelling</td></tr>
+        <tr class="row-alert"><td>Buying property post-1 July 2027</td><td>Strategy must shift</td><td>Evaluate new-build pathway</td></tr>
+        <tr><td>Long-held high-gain property</td><td>Sale post-FY27 more costly</td><td>Consider crystallising earlier</td></tr>
+        <tr class="row-alert"><td>Family trust user</td><td>30% minimum tax</td><td>Three-year restructure review</td></tr>
+        <tr><td>Small business + capex plans</td><td>Permanent IAWO advantage</td><td>Time $20k-band purchases</td></tr>
+        <tr><td>Wage earner, &lt;$1k expenses</td><td>Instant deduction wins</td><td>Automatic from FY27</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="pullquote">
+    <p>Tax reform is not made in the legislation —<br>it is made in the timeline. Each date is both an opportunity<br>and a threshold.</p>
+  </div>
+</section>
+
+<!-- DISCLAIMER -->
+
+<div class="disclaimer">
+  <div class="disclaimer-label">Important Disclaimer</div>
+  <p>This briefing is a summary prepared on the basis of the Federal Budget delivered on 12 May 2026. It does not constitute personal tax, legal, or investment advice and should not be relied upon as such. Individual tax outcomes will depend on personal circumstances; clients should obtain tailored advice before acting on any matter discussed. A number of measures remain subject to enabling legislation, and rates, thresholds, and effective dates may be amended during the legislative process. Worked examples are illustrative only and do not constitute a prediction of any particular client outcome.</p>
+</div>
+
+<!-- FOOTER -->
+
+<footer>
+  <div class="footer-ornament">❦ · ❦ · ❦</div>
+  <p class="firm-name">SML Bookkeeping &amp; Tax</p>
+  <div class="footer-divider"></div>
+  <p class="principal-name">Maybell Sun, <span class="creds">FCPA</span></p>
+  <p class="principal-title">Registered Tax Agent · Principal Accountant</p>
+
+  <div class="contact-grid">
+    <div class="contact-block">
+      <div class="contact-label">Office</div>
+      <p>(03) 9191 3731</p>
+    </div>
+    <div class="contact-block">
+      <div class="contact-label">Mobile</div>
+      <p>0433 408 886</p>
+    </div>
+    <div class="contact-block">
+      <div class="contact-label">Email</div>
+      <p><a href="mailto:maybell@smlbookkeeping.com.au">maybell@smlbookkeeping.com.au</a></p>
+    </div>
+    <div class="contact-block">
+      <div class="contact-label">Web</div>
+      <p><a href="https://www.smlbookkeeping.com.au" target="_blank" rel="noopener">smlbookkeeping.com.au</a></p>
+    </div>
+  </div>
+
+  <p class="address">1341 Dandenong Road · Chadstone VIC 3148</p>
+  <p class="footer-meta">Melbourne · 2026</p>
+</footer>
+
+</div>
+
+</body>
+</html>
