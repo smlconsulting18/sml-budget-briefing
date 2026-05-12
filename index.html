@@ -5,8 +5,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>2026–27 联邦预算税改解读 | 投资人专题简报</title>
+<link rel="preconnect" href="https://fonts.bunny.net">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.bunny.net/css?family=cormorant-garamond:400i,500,600,700,700i|noto-serif-sc:300,400,500,600,700,900|jetbrains-mono:400,500&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Noto+Serif+SC:wght@300;400;500;600;700;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -32,17 +34,19 @@
 
 html {
 scroll-behavior: smooth;
+background: #f5f1e8;
 }
 
 body {
 background: var(–paper);
 color: var(–ink);
-font-family: ‘Noto Serif SC’, ‘Cormorant Garamond’, Georgia, serif;
+font-family: ‘Noto Serif SC’, ‘Songti SC’, ‘Source Han Serif SC’, ‘Source Han Serif CN’, ‘思源宋体’, ‘STSong’, ‘SimSun’, ‘Cormorant Garamond’, Georgia, serif;
 font-weight: 400;
 line-height: 1.75;
 font-feature-settings: “kern” 1, “liga” 1;
 -webkit-font-smoothing: antialiased;
 overflow-x: hidden;
+min-width: 320px;
 }
 
 /* === Paper texture === */
@@ -101,7 +105,7 @@ flex: 1;
 }
 
 .rh-firm {
-font-family: ‘Cormorant Garamond’, serif;
+font-family: ‘Cormorant Garamond’, Georgia, ‘Iowan Old Style’, ‘Palatino’, serif;
 font-style: italic;
 font-size: 1.05rem;
 font-weight: 600;
@@ -117,7 +121,7 @@ flex-shrink: 0;
 }
 
 .rh-document {
-font-family: ‘Noto Serif SC’, serif;
+font-family: ‘Noto Serif SC’, ‘Songti SC’, ‘Source Han Serif SC’, ‘思源宋体’, STSong, SimSun, Georgia, serif;
 font-size: 0.82rem;
 color: var(–ink-soft);
 font-weight: 500;
@@ -131,7 +135,7 @@ min-width: 0;
 display: flex;
 align-items: center;
 gap: 0.8rem;
-font-family: ‘JetBrains Mono’, monospace;
+font-family: ‘JetBrains Mono’, ‘SF Mono’, Menlo, Monaco, Consolas, monospace;
 font-size: 0.65rem;
 letter-spacing: 0.18em;
 text-transform: uppercase;
@@ -158,21 +162,23 @@ padding-top: 50px;
 padding: 0.5rem 4vw;
 }
 .rh-firm {
-font-size: 0.9rem;
+font-size: 0.85rem;
 }
 .rh-separator,
-.rh-document {
+.rh-document,
+.rh-date {
 display: none;
 }
 .rh-right {
 font-size: 0.6rem;
 gap: 0.5rem;
 }
-.rh-date {
-display: none;
+.rh-confidential {
+font-size: 0.55rem;
+padding: 0.15rem 0.5rem;
 }
 body {
-padding-top: 42px;
+padding-top: 38px;
 }
 }
 
@@ -205,18 +211,18 @@ width: 200%;
 height: 200%;
 transform: rotate(-30deg);
 display: grid;
-grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-grid-auto-rows: 200px;
+grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+grid-auto-rows: 140px;
 gap: 0;
 }
 
 .watermark-text {
-font-family: ‘Cormorant Garamond’, serif;
+font-family: ‘Cormorant Garamond’, Georgia, serif;
 font-style: italic;
-font-size: 1.5rem;
+font-size: 0.95rem;
 font-weight: 500;
-letter-spacing: 0.15em;
-color: rgba(42, 63, 46, 0.09);
+letter-spacing: 0.18em;
+color: rgba(42, 63, 46, 0.055);
 white-space: nowrap;
 display: flex;
 align-items: center;
@@ -225,8 +231,19 @@ text-transform: uppercase;
 }
 
 .watermark-text .dot {
-color: rgba(168, 133, 74, 0.14);
+color: rgba(168, 133, 74, 0.08);
 margin: 0 0.5em;
+}
+
+@media (max-width: 768px) {
+.watermark-grid {
+grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+grid-auto-rows: 110px;
+}
+.watermark-text {
+font-size: 0.75rem;
+letter-spacing: 0.15em;
+}
 }
 
 @media print {
@@ -234,7 +251,7 @@ margin: 0 0.5em;
 z-index: 100;
 }
 .watermark-text {
-color: rgba(42, 63, 46, 0.15);
+color: rgba(42, 63, 46, 0.12);
 }
 }
 
@@ -257,7 +274,7 @@ position: relative;
 display: flex;
 justify-content: space-between;
 align-items: center;
-font-family: ‘JetBrains Mono’, monospace;
+font-family: ‘JetBrains Mono’, ‘SF Mono’, Monaco, monospace;
 font-size: 0.75rem;
 letter-spacing: 0.18em;
 text-transform: uppercase;
@@ -265,12 +282,32 @@ color: var(–ink-soft);
 padding-bottom: 1.5rem;
 border-bottom: 1px solid var(–rule-soft);
 margin-bottom: 2rem;
+flex-wrap: wrap;
+gap: 1rem;
 }
 
 .masthead-top .left, .masthead-top .right {
 display: flex;
-gap: 1.5rem;
+gap: 1rem;
 align-items: center;
+flex-wrap: wrap;
+}
+
+.masthead-top span {
+white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+.masthead-top {
+flex-direction: column;
+gap: 0.6rem;
+font-size: 0.65rem;
+padding-bottom: 1rem;
+}
+.masthead-top .left, .masthead-top .right {
+gap: 0.6rem;
+justify-content: center;
+}
 }
 
 .ornament {
@@ -284,7 +321,7 @@ padding: 1.5rem 0;
 }
 
 .eyebrow {
-font-family: ‘Cormorant Garamond’, serif;
+font-family: ‘Cormorant Garamond’, Georgia, ‘Iowan Old Style’, ‘Palatino’, serif;
 font-style: italic;
 font-size: 1.05rem;
 letter-spacing: 0.05em;
@@ -293,7 +330,7 @@ margin-bottom: 0.5rem;
 }
 
 .masthead h1 {
-font-family: ‘Noto Serif SC’, serif;
+font-family: ‘Noto Serif SC’, ‘Songti SC’, ‘Source Han Serif SC’, ‘思源宋体’, STSong, SimSun, Georgia, serif;
 font-weight: 900;
 font-size: clamp(2.4rem, 6vw, 4.5rem);
 line-height: 1.05;
@@ -305,17 +342,25 @@ margin: 0.5rem 0;
 .masthead h1 .accent {
 color: var(–crimson);
 font-style: italic;
-font-family: ‘Cormorant Garamond’, serif;
+font-family: ‘Cormorant Garamond’, Georgia, ‘Iowan Old Style’, ‘Palatino’, serif;
 font-weight: 600;
 }
 
 .subtitle-en {
-font-family: ‘Cormorant Garamond’, serif;
+font-family: ‘Cormorant Garamond’, Georgia, serif;
 font-style: italic;
 font-size: 1.3rem;
 color: var(–ink-soft);
 margin-top: 1rem;
 letter-spacing: 0.02em;
+line-height: 1.4;
+}
+
+@media (max-width: 600px) {
+.subtitle-en {
+font-size: 1.1rem;
+padding: 0 0.5rem;
+}
 }
 
 .deck {
@@ -329,7 +374,7 @@ font-weight: 400;
 }
 
 .deck::first-letter {
-font-family: ‘Cormorant Garamond’, serif;
+font-family: ‘Cormorant Garamond’, Georgia, ‘Iowan Old Style’, ‘Palatino’, serif;
 font-size: 1.4em;
 color: var(–crimson);
 font-weight: 600;
@@ -366,7 +411,7 @@ opacity: 0.7;
 }
 
 .hero-label {
-font-family: ‘JetBrains Mono’, monospace;
+font-family: ‘JetBrains Mono’, ‘SF Mono’, Menlo, Monaco, Consolas, monospace;
 font-size: 0.7rem;
 letter-spacing: 0.3em;
 text-transform: uppercase;
@@ -394,7 +439,7 @@ border-bottom: 1px solid var(–rule-soft);
 }
 
 .toc-label {
-font-family: ‘JetBrains Mono’, monospace;
+font-family: ‘JetBrains Mono’, ‘SF Mono’, Menlo, Monaco, Consolas, monospace;
 font-size: 0.7rem;
 letter-spacing: 0.3em;
 text-transform: uppercase;
@@ -426,7 +471,7 @@ padding-left: 0.5rem;
 }
 
 .toc-num {
-font-family: ‘Cormorant Garamond’, serif;
+font-family: ‘Cormorant Garamond’, Georgia, ‘Iowan Old Style’, ‘Palatino’, serif;
 font-style: italic;
 font-size: 1.1rem;
 color: var(–gold-deep);
@@ -452,7 +497,7 @@ position: relative;
 }
 
 .section-number {
-font-family: ‘Cormorant Garamond’, serif;
+font-family: ‘Cormorant Garamond’, Georgia, ‘Iowan Old Style’, ‘Palatino’, serif;
 font-style: italic;
 font-size: 5rem;
 line-height: 1;
@@ -466,7 +511,7 @@ font-weight: 400;
 }
 
 .section-tag {
-font-family: ‘JetBrains Mono’, monospace;
+font-family: ‘JetBrains Mono’, ‘SF Mono’, Menlo, Monaco, Consolas, monospace;
 font-size: 0.7rem;
 letter-spacing: 0.3em;
 text-transform: uppercase;
@@ -488,7 +533,7 @@ background: var(–crimson);
 }
 
 h2 {
-font-family: ‘Noto Serif SC’, serif;
+font-family: ‘Noto Serif SC’, ‘Songti SC’, ‘Source Han Serif SC’, ‘思源宋体’, STSong, SimSun, Georgia, serif;
 font-weight: 700;
 font-size: clamp(1.8rem, 4vw, 2.6rem);
 color: var(–forest-deep);
@@ -501,7 +546,7 @@ margin-bottom: 0.5rem;
 
 h2 .en {
 display: block;
-font-family: ‘Cormorant Garamond’, serif;
+font-family: ‘Cormorant Garamond’, Georgia, ‘Iowan Old Style’, ‘Palatino’, serif;
 font-style: italic;
 font-size: 0.55em;
 font-weight: 400;
@@ -511,7 +556,7 @@ margin-top: 0.3rem;
 }
 
 h3 {
-font-family: ‘Noto Serif SC’, serif;
+font-family: ‘Noto Serif SC’, ‘Songti SC’, ‘Source Han Serif SC’, ‘思源宋体’, STSong, SimSun, Georgia, serif;
 font-weight: 600;
 font-size: 1.3rem;
 color: var(–forest);
@@ -521,7 +566,7 @@ border-bottom: 1px solid var(–rule);
 }
 
 h4 {
-font-family: ‘Noto Serif SC’, serif;
+font-family: ‘Noto Serif SC’, ‘Songti SC’, ‘Source Han Serif SC’, ‘思源宋体’, STSong, SimSun, Georgia, serif;
 font-weight: 600;
 font-size: 1.05rem;
 color: var(–forest-deep);
@@ -580,7 +625,7 @@ box-shadow: 0 12px 30px rgba(30, 46, 34, 0.08);
 .bucket-4 { border-top-color: var(–forest-deep); }
 
 .bucket-num {
-font-family: ‘Cormorant Garamond’, serif;
+font-family: ‘Cormorant Garamond’, Georgia, ‘Iowan Old Style’, ‘Palatino’, serif;
 font-style: italic;
 font-size: 0.85rem;
 color: var(–gold-deep);
@@ -589,7 +634,7 @@ margin-bottom: 0.5rem;
 }
 
 .bucket-title {
-font-family: ‘Noto Serif SC’, serif;
+font-family: ‘Noto Serif SC’, ‘Songti SC’, ‘Source Han Serif SC’, ‘思源宋体’, STSong, SimSun, Georgia, serif;
 font-weight: 700;
 font-size: 1.15rem;
 color: var(–forest-deep);
@@ -598,7 +643,7 @@ line-height: 1.3;
 }
 
 .bucket-date {
-font-family: ‘JetBrains Mono’, monospace;
+font-family: ‘JetBrains Mono’, ‘SF Mono’, Menlo, Monaco, Consolas, monospace;
 font-size: 0.7rem;
 color: var(–ink-soft);
 margin-bottom: 1rem;
@@ -608,7 +653,7 @@ letter-spacing: 0.05em;
 .bucket-status {
 display: inline-block;
 padding: 0.2rem 0.7rem;
-font-family: ‘JetBrains Mono’, monospace;
+font-family: ‘JetBrains Mono’, ‘SF Mono’, Menlo, Monaco, Consolas, monospace;
 font-size: 0.65rem;
 letter-spacing: 0.15em;
 text-transform: uppercase;
@@ -644,7 +689,7 @@ left: 1.5rem;
 background: var(–forest-deep);
 color: var(–gold);
 padding: 0.3rem 1rem;
-font-family: ‘JetBrains Mono’, monospace;
+font-family: ‘JetBrains Mono’, ‘SF Mono’, Menlo, Monaco, Consolas, monospace;
 font-size: 0.7rem;
 letter-spacing: 0.2em;
 }
@@ -654,7 +699,7 @@ position: absolute;
 top: -0.55rem;
 left: 5.5rem;
 color: var(–gold);
-font-family: ‘Cormorant Garamond’, serif;
+font-family: ‘Cormorant Garamond’, Georgia, ‘Iowan Old Style’, ‘Palatino’, serif;
 font-style: italic;
 font-size: 0.85rem;
 padding-top: 0.05rem;
@@ -678,7 +723,7 @@ border: 1px solid var(–rule-soft);
 }
 
 .comparison-header {
-font-family: ‘JetBrains Mono’, monospace;
+font-family: ‘JetBrains Mono’, ‘SF Mono’, Menlo, Monaco, Consolas, monospace;
 font-size: 0.7rem;
 letter-spacing: 0.25em;
 text-transform: uppercase;
@@ -700,7 +745,7 @@ text-align: left;
 padding: 0.9rem 1rem;
 background: var(–forest-deep);
 color: var(–gold);
-font-family: ‘Noto Serif SC’, serif;
+font-family: ‘Noto Serif SC’, ‘Songti SC’, ‘Source Han Serif SC’, ‘思源宋体’, STSong, SimSun, Georgia, serif;
 font-weight: 600;
 font-size: 0.9rem;
 letter-spacing: 0.02em;
@@ -748,7 +793,7 @@ font-size: 1.4rem;
 }
 
 .action-label {
-font-family: ‘JetBrains Mono’, monospace;
+font-family: ‘JetBrains Mono’, ‘SF Mono’, Menlo, Monaco, Consolas, monospace;
 font-size: 0.7rem;
 letter-spacing: 0.3em;
 text-transform: uppercase;
@@ -781,7 +826,7 @@ position: relative;
 .pull-quote::before {
 content: “❝”;
 display: block;
-font-family: ‘Cormorant Garamond’, serif;
+font-family: ‘Cormorant Garamond’, Georgia, ‘Iowan Old Style’, ‘Palatino’, serif;
 font-size: 4rem;
 color: var(–gold);
 line-height: 0.5;
@@ -789,7 +834,7 @@ margin-bottom: 1rem;
 }
 
 .pull-quote p {
-font-family: ‘Cormorant Garamond’, serif;
+font-family: ‘Cormorant Garamond’, Georgia, ‘Iowan Old Style’, ‘Palatino’, serif;
 font-style: italic;
 font-size: 1.6rem;
 line-height: 1.5;
@@ -850,7 +895,7 @@ line-height: 1.7;
 }
 
 .disclaimer-label {
-font-family: ‘JetBrains Mono’, monospace;
+font-family: ‘JetBrains Mono’, ‘SF Mono’, Menlo, Monaco, Consolas, monospace;
 font-size: 0.7rem;
 letter-spacing: 0.3em;
 text-transform: uppercase;
@@ -875,7 +920,7 @@ margin: 1.5rem 0;
 }
 
 footer .firm {
-font-family: ‘Cormorant Garamond’, serif;
+font-family: ‘Cormorant Garamond’, Georgia, ‘Iowan Old Style’, ‘Palatino’, serif;
 font-style: italic;
 font-size: 1.6rem;
 color: var(–forest-deep);
@@ -896,7 +941,7 @@ margin-bottom: 2rem;
 }
 
 .principal-name {
-font-family: ‘Noto Serif SC’, serif;
+font-family: ‘Noto Serif SC’, ‘Songti SC’, ‘Source Han Serif SC’, ‘思源宋体’, STSong, SimSun, Georgia, serif;
 font-size: 1.15rem;
 font-weight: 600;
 color: var(–forest-deep);
@@ -904,7 +949,7 @@ margin-bottom: 0.3rem;
 }
 
 .principal-name .creds {
-font-family: ‘Cormorant Garamond’, serif;
+font-family: ‘Cormorant Garamond’, Georgia, ‘Iowan Old Style’, ‘Palatino’, serif;
 font-style: italic;
 font-weight: 500;
 color: var(–gold-deep);
@@ -913,7 +958,7 @@ letter-spacing: 0.05em;
 }
 
 .principal-title {
-font-family: ‘Cormorant Garamond’, serif;
+font-family: ‘Cormorant Garamond’, Georgia, ‘Iowan Old Style’, ‘Palatino’, serif;
 font-style: italic;
 font-size: 1rem;
 color: var(–ink-soft);
@@ -936,7 +981,7 @@ text-align: center;
 }
 
 .contact-label {
-font-family: ‘JetBrains Mono’, monospace;
+font-family: ‘JetBrains Mono’, ‘SF Mono’, Menlo, Monaco, Consolas, monospace;
 font-size: 0.65rem;
 letter-spacing: 0.25em;
 text-transform: uppercase;
@@ -945,7 +990,7 @@ margin-bottom: 0.4rem;
 }
 
 .contact-block p {
-font-family: ‘Noto Serif SC’, serif;
+font-family: ‘Noto Serif SC’, ‘Songti SC’, ‘Source Han Serif SC’, ‘思源宋体’, STSong, SimSun, Georgia, serif;
 font-size: 0.92rem;
 color: var(–ink);
 margin: 0;
@@ -967,7 +1012,7 @@ border-bottom-color: var(–crimson);
 }
 
 .address {
-font-family: ‘Cormorant Garamond’, serif;
+font-family: ‘Cormorant Garamond’, Georgia, ‘Iowan Old Style’, ‘Palatino’, serif;
 font-style: italic;
 font-size: 1.05rem;
 color: var(–ink-soft);
@@ -976,7 +1021,7 @@ letter-spacing: 0.03em;
 }
 
 footer .meta {
-font-family: ‘JetBrains Mono’, monospace;
+font-family: ‘JetBrains Mono’, ‘SF Mono’, Menlo, Monaco, Consolas, monospace;
 font-size: 0.7rem;
 letter-spacing: 0.2em;
 color: var(–ink-soft);
