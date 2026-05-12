@@ -1,0 +1,1812 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026–27 联邦预算税改解读 | 投资人专题简报</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Noto+Serif+SC:wght@300;400;500;600;700;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a1f1a;
+    --ink-soft: #2d342d;
+    --paper: #f5f1e8;
+    --paper-warm: #ede7d6;
+    --paper-deep: #e3dcc6;
+    --forest: #2a3f2e;
+    --forest-deep: #1e2e22;
+    --gold: #a8854a;
+    --gold-deep: #876535;
+    --crimson: #8b3a3a;
+    --rule: #c9bf9f;
+    --rule-soft: #ddd3b3;
+  }
+
+- {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+html {
+scroll-behavior: smooth;
+}
+
+body {
+background: var(–paper);
+color: var(–ink);
+font-family: ‘Noto Serif SC’, ‘Cormorant Garamond’, Georgia, serif;
+font-weight: 400;
+line-height: 1.75;
+font-feature-settings: “kern” 1, “liga” 1;
+-webkit-font-smoothing: antialiased;
+overflow-x: hidden;
+}
+
+/* === Paper texture === */
+body::before {
+content: “”;
+position: fixed;
+inset: 0;
+background-image:
+radial-gradient(circle at 20% 30%, rgba(168, 133, 74, 0.04) 0%, transparent 50%),
+radial-gradient(circle at 80% 70%, rgba(42, 63, 46, 0.03) 0%, transparent 50%);
+pointer-events: none;
+z-index: 1;
+}
+
+body::after {
+content: “”;
+position: fixed;
+inset: 0;
+background-image: url(“data:image/svg+xml,%3Csvg viewBox=‘0 0 200 200’ xmlns=‘http://www.w3.org/2000/svg’%3E%3Cfilter id=‘noiseFilter’%3E%3CfeTurbulence type=‘fractalNoise’ baseFrequency=‘0.85’ numOctaves=‘3’ stitchTiles=‘stitch’/%3E%3CfeColorMatrix values=‘0 0 0 0 0.4 0 0 0 0 0.3 0 0 0 0 0.2 0 0 0 0.08 0’/%3E%3C/filter%3E%3Crect width=‘100%25’ height=‘100%25’ filter=‘url(%23noiseFilter)’/%3E%3C/svg%3E”);
+opacity: 0.4;
+pointer-events: none;
+z-index: 1;
+mix-blend-mode: multiply;
+}
+
+/* === Running Page Header === */
+.running-head {
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+z-index: 50;
+background: var(–paper);
+border-bottom: 1px solid var(–rule);
+box-shadow: 0 1px 0 var(–rule-soft), 0 2px 12px rgba(30, 46, 34, 0.04);
+backdrop-filter: blur(8px);
+-webkit-backdrop-filter: blur(8px);
+}
+
+.running-head-inner {
+max-width: 1200px;
+margin: 0 auto;
+padding: 0.7rem 4vw;
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 1rem;
+}
+
+.rh-left {
+display: flex;
+align-items: baseline;
+gap: 0.7rem;
+min-width: 0;
+flex: 1;
+}
+
+.rh-firm {
+font-family: ‘Cormorant Garamond’, serif;
+font-style: italic;
+font-size: 1.05rem;
+font-weight: 600;
+color: var(–forest-deep);
+letter-spacing: 0.02em;
+white-space: nowrap;
+}
+
+.rh-separator {
+color: var(–gold);
+font-size: 0.9rem;
+flex-shrink: 0;
+}
+
+.rh-document {
+font-family: ‘Noto Serif SC’, serif;
+font-size: 0.82rem;
+color: var(–ink-soft);
+font-weight: 500;
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+min-width: 0;
+}
+
+.rh-right {
+display: flex;
+align-items: center;
+gap: 0.8rem;
+font-family: ‘JetBrains Mono’, monospace;
+font-size: 0.65rem;
+letter-spacing: 0.18em;
+text-transform: uppercase;
+color: var(–gold-deep);
+flex-shrink: 0;
+}
+
+.rh-confidential {
+padding: 0.2rem 0.6rem;
+background: var(–crimson);
+color: var(–paper);
+font-weight: 600;
+letter-spacing: 0.2em;
+font-size: 0.6rem;
+}
+
+/* Push body down to make room for fixed header */
+body {
+padding-top: 50px;
+}
+
+@media (max-width: 768px) {
+.running-head-inner {
+padding: 0.5rem 4vw;
+}
+.rh-firm {
+font-size: 0.9rem;
+}
+.rh-separator,
+.rh-document {
+display: none;
+}
+.rh-right {
+font-size: 0.6rem;
+gap: 0.5rem;
+}
+.rh-date {
+display: none;
+}
+body {
+padding-top: 42px;
+}
+}
+
+@media print {
+.running-head {
+position: fixed;
+box-shadow: none;
+border-bottom: 1px solid var(–ink);
+background: var(–paper);
+}
+}
+
+/* === Diagonal Watermark === */
+.watermark {
+position: fixed;
+inset: 0;
+pointer-events: none;
+z-index: 100;
+overflow: hidden;
+user-select: none;
+-webkit-user-select: none;
+mix-blend-mode: multiply;
+}
+
+.watermark-grid {
+position: absolute;
+top: -50%;
+left: -50%;
+width: 200%;
+height: 200%;
+transform: rotate(-30deg);
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+grid-auto-rows: 200px;
+gap: 0;
+}
+
+.watermark-text {
+font-family: ‘Cormorant Garamond’, serif;
+font-style: italic;
+font-size: 1.5rem;
+font-weight: 500;
+letter-spacing: 0.15em;
+color: rgba(42, 63, 46, 0.09);
+white-space: nowrap;
+display: flex;
+align-items: center;
+justify-content: center;
+text-transform: uppercase;
+}
+
+.watermark-text .dot {
+color: rgba(168, 133, 74, 0.14);
+margin: 0 0.5em;
+}
+
+@media print {
+.watermark {
+z-index: 100;
+}
+.watermark-text {
+color: rgba(42, 63, 46, 0.15);
+}
+}
+
+.page {
+position: relative;
+z-index: 2;
+max-width: 1200px;
+margin: 0 auto;
+padding: 0 4vw;
+}
+
+/* === Masthead === */
+.masthead {
+padding: 2.5rem 0 2rem;
+border-bottom: 3px double var(–ink);
+position: relative;
+}
+
+.masthead-top {
+display: flex;
+justify-content: space-between;
+align-items: center;
+font-family: ‘JetBrains Mono’, monospace;
+font-size: 0.75rem;
+letter-spacing: 0.18em;
+text-transform: uppercase;
+color: var(–ink-soft);
+padding-bottom: 1.5rem;
+border-bottom: 1px solid var(–rule-soft);
+margin-bottom: 2rem;
+}
+
+.masthead-top .left, .masthead-top .right {
+display: flex;
+gap: 1.5rem;
+align-items: center;
+}
+
+.ornament {
+color: var(–gold);
+font-size: 1rem;
+}
+
+.title-wrap {
+text-align: center;
+padding: 1.5rem 0;
+}
+
+.eyebrow {
+font-family: ‘Cormorant Garamond’, serif;
+font-style: italic;
+font-size: 1.05rem;
+letter-spacing: 0.05em;
+color: var(–gold-deep);
+margin-bottom: 0.5rem;
+}
+
+.masthead h1 {
+font-family: ‘Noto Serif SC’, serif;
+font-weight: 900;
+font-size: clamp(2.4rem, 6vw, 4.5rem);
+line-height: 1.05;
+letter-spacing: -0.02em;
+color: var(–forest-deep);
+margin: 0.5rem 0;
+}
+
+.masthead h1 .accent {
+color: var(–crimson);
+font-style: italic;
+font-family: ‘Cormorant Garamond’, serif;
+font-weight: 600;
+}
+
+.subtitle-en {
+font-family: ‘Cormorant Garamond’, serif;
+font-style: italic;
+font-size: 1.3rem;
+color: var(–ink-soft);
+margin-top: 1rem;
+letter-spacing: 0.02em;
+}
+
+.deck {
+max-width: 720px;
+margin: 2rem auto 0;
+font-size: 1.15rem;
+line-height: 1.8;
+color: var(–ink-soft);
+text-align: center;
+font-weight: 400;
+}
+
+.deck::first-letter {
+font-family: ‘Cormorant Garamond’, serif;
+font-size: 1.4em;
+color: var(–crimson);
+font-weight: 600;
+}
+
+/* === Hero callout === */
+.hero-callout {
+margin: 3rem 0;
+padding: 2.5rem 3rem;
+background: var(–forest-deep);
+color: var(–paper);
+position: relative;
+overflow: hidden;
+}
+
+.hero-callout::before {
+content: “”;
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+height: 4px;
+background: linear-gradient(90deg, var(–gold) 0%, var(–gold-deep) 50%, var(–gold) 100%);
+}
+
+.hero-callout::after {
+content: “❦”;
+position: absolute;
+top: 1rem;
+right: 1.5rem;
+color: var(–gold);
+font-size: 1.5rem;
+opacity: 0.7;
+}
+
+.hero-label {
+font-family: ‘JetBrains Mono’, monospace;
+font-size: 0.7rem;
+letter-spacing: 0.3em;
+text-transform: uppercase;
+color: var(–gold);
+margin-bottom: 1rem;
+}
+
+.hero-callout p {
+font-size: 1.4rem;
+line-height: 1.6;
+font-weight: 300;
+}
+
+.hero-callout strong {
+color: var(–gold);
+font-weight: 600;
+}
+
+/* === Table of Contents === */
+.toc {
+margin: 4rem 0;
+padding: 2rem 0;
+border-top: 1px solid var(–rule-soft);
+border-bottom: 1px solid var(–rule-soft);
+}
+
+.toc-label {
+font-family: ‘JetBrains Mono’, monospace;
+font-size: 0.7rem;
+letter-spacing: 0.3em;
+text-transform: uppercase;
+color: var(–gold-deep);
+margin-bottom: 1.5rem;
+text-align: center;
+}
+
+.toc-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+gap: 0.5rem 3rem;
+}
+
+.toc-item {
+display: flex;
+align-items: baseline;
+gap: 1rem;
+padding: 0.6rem 0;
+border-bottom: 1px dotted var(–rule);
+text-decoration: none;
+color: var(–ink);
+transition: all 0.3s ease;
+}
+
+.toc-item:hover {
+color: var(–crimson);
+padding-left: 0.5rem;
+}
+
+.toc-num {
+font-family: ‘Cormorant Garamond’, serif;
+font-style: italic;
+font-size: 1.1rem;
+color: var(–gold-deep);
+font-weight: 600;
+min-width: 1.5rem;
+}
+
+.toc-title {
+flex: 1;
+font-size: 0.95rem;
+font-weight: 500;
+}
+
+/* === Section === */
+section {
+margin: 5rem 0;
+scroll-margin-top: 2rem;
+}
+
+.section-header {
+margin-bottom: 3rem;
+position: relative;
+}
+
+.section-number {
+font-family: ‘Cormorant Garamond’, serif;
+font-style: italic;
+font-size: 5rem;
+line-height: 1;
+color: var(–gold);
+opacity: 0.4;
+position: absolute;
+top: -1.5rem;
+left: -0.5rem;
+z-index: 0;
+font-weight: 400;
+}
+
+.section-tag {
+font-family: ‘JetBrains Mono’, monospace;
+font-size: 0.7rem;
+letter-spacing: 0.3em;
+text-transform: uppercase;
+color: var(–crimson);
+margin-bottom: 1rem;
+position: relative;
+z-index: 1;
+padding-left: 2.5rem;
+}
+
+.section-tag::before {
+content: “”;
+position: absolute;
+left: 0;
+top: 50%;
+width: 2rem;
+height: 1px;
+background: var(–crimson);
+}
+
+h2 {
+font-family: ‘Noto Serif SC’, serif;
+font-weight: 700;
+font-size: clamp(1.8rem, 4vw, 2.6rem);
+color: var(–forest-deep);
+line-height: 1.2;
+letter-spacing: -0.01em;
+position: relative;
+z-index: 1;
+margin-bottom: 0.5rem;
+}
+
+h2 .en {
+display: block;
+font-family: ‘Cormorant Garamond’, serif;
+font-style: italic;
+font-size: 0.55em;
+font-weight: 400;
+color: var(–ink-soft);
+letter-spacing: 0;
+margin-top: 0.3rem;
+}
+
+h3 {
+font-family: ‘Noto Serif SC’, serif;
+font-weight: 600;
+font-size: 1.3rem;
+color: var(–forest);
+margin: 2rem 0 1rem;
+padding-bottom: 0.5rem;
+border-bottom: 1px solid var(–rule);
+}
+
+h4 {
+font-family: ‘Noto Serif SC’, serif;
+font-weight: 600;
+font-size: 1.05rem;
+color: var(–forest-deep);
+margin: 1.5rem 0 0.7rem;
+}
+
+p {
+margin-bottom: 1.2rem;
+font-size: 1.05rem;
+line-height: 1.85;
+}
+
+strong {
+font-weight: 600;
+color: var(–forest-deep);
+}
+
+em {
+font-style: italic;
+color: var(–gold-deep);
+}
+
+/* === The Four Buckets - the showcase === */
+.buckets-intro {
+margin: 2rem 0 3rem;
+padding: 1.5rem 2rem;
+background: var(–paper-warm);
+border-left: 3px solid var(–gold);
+font-style: italic;
+color: var(–ink-soft);
+}
+
+.buckets-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+gap: 1.5rem;
+margin: 2rem 0;
+}
+
+.bucket {
+background: var(–paper-warm);
+padding: 2rem 1.8rem;
+position: relative;
+border-top: 4px solid var(–rule);
+transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.bucket:hover {
+transform: translateY(-4px);
+box-shadow: 0 12px 30px rgba(30, 46, 34, 0.08);
+}
+
+.bucket-1 { border-top-color: #5a7a4f; }
+.bucket-2 { border-top-color: var(–gold); }
+.bucket-3 { border-top-color: var(–crimson); }
+.bucket-4 { border-top-color: var(–forest-deep); }
+
+.bucket-num {
+font-family: ‘Cormorant Garamond’, serif;
+font-style: italic;
+font-size: 0.85rem;
+color: var(–gold-deep);
+letter-spacing: 0.1em;
+margin-bottom: 0.5rem;
+}
+
+.bucket-title {
+font-family: ‘Noto Serif SC’, serif;
+font-weight: 700;
+font-size: 1.15rem;
+color: var(–forest-deep);
+margin-bottom: 0.3rem;
+line-height: 1.3;
+}
+
+.bucket-date {
+font-family: ‘JetBrains Mono’, monospace;
+font-size: 0.7rem;
+color: var(–ink-soft);
+margin-bottom: 1rem;
+letter-spacing: 0.05em;
+}
+
+.bucket-status {
+display: inline-block;
+padding: 0.2rem 0.7rem;
+font-family: ‘JetBrains Mono’, monospace;
+font-size: 0.65rem;
+letter-spacing: 0.15em;
+text-transform: uppercase;
+margin-bottom: 1rem;
+border-radius: 2px;
+}
+
+.status-safe { background: #5a7a4f; color: var(–paper); }
+.status-warn { background: var(–gold); color: var(–paper); }
+.status-alert { background: var(–crimson); color: var(–paper); }
+.status-opp { background: var(–forest-deep); color: var(–gold); }
+
+.bucket p {
+font-size: 0.95rem;
+line-height: 1.7;
+margin-bottom: 0;
+}
+
+/* === Example boxes === */
+.example {
+margin: 2rem 0;
+padding: 1.8rem 2rem;
+background: linear-gradient(to bottom, var(–paper-warm) 0%, var(–paper-deep) 100%);
+position: relative;
+border-radius: 2px;
+}
+
+.example::before {
+content: “案例”;
+position: absolute;
+top: -0.7rem;
+left: 1.5rem;
+background: var(–forest-deep);
+color: var(–gold);
+padding: 0.3rem 1rem;
+font-family: ‘JetBrains Mono’, monospace;
+font-size: 0.7rem;
+letter-spacing: 0.2em;
+}
+
+.example-en {
+position: absolute;
+top: -0.55rem;
+left: 5.5rem;
+color: var(–gold);
+font-family: ‘Cormorant Garamond’, serif;
+font-style: italic;
+font-size: 0.85rem;
+padding-top: 0.05rem;
+}
+
+.example h4 {
+margin-top: 0.5rem;
+color: var(–crimson);
+}
+
+.example p {
+font-size: 0.98rem;
+}
+
+/* === Comparison Table === */
+.comparison {
+margin: 2.5rem 0;
+background: var(–paper-warm);
+padding: 2rem;
+border: 1px solid var(–rule-soft);
+}
+
+.comparison-header {
+font-family: ‘JetBrains Mono’, monospace;
+font-size: 0.7rem;
+letter-spacing: 0.25em;
+text-transform: uppercase;
+color: var(–gold-deep);
+margin-bottom: 1rem;
+padding-bottom: 1rem;
+border-bottom: 1px solid var(–rule);
+}
+
+table {
+width: 100%;
+border-collapse: collapse;
+margin: 1rem 0;
+font-size: 0.95rem;
+}
+
+th {
+text-align: left;
+padding: 0.9rem 1rem;
+background: var(–forest-deep);
+color: var(–gold);
+font-family: ‘Noto Serif SC’, serif;
+font-weight: 600;
+font-size: 0.9rem;
+letter-spacing: 0.02em;
+}
+
+td {
+padding: 0.9rem 1rem;
+border-bottom: 1px solid var(–rule-soft);
+font-size: 0.95rem;
+line-height: 1.6;
+}
+
+tr:last-child td {
+border-bottom: none;
+}
+
+tr:hover td {
+background: rgba(168, 133, 74, 0.05);
+}
+
+.highlight-row {
+background: rgba(139, 58, 58, 0.08);
+}
+
+.highlight-row td {
+font-weight: 600;
+}
+
+/* === Action callouts === */
+.action-box {
+margin: 2.5rem 0;
+padding: 2rem 2.5rem;
+background: var(–forest-deep);
+color: var(–paper);
+position: relative;
+}
+
+.action-box::before {
+content: “✦”;
+position: absolute;
+top: 1rem;
+right: 1.5rem;
+color: var(–gold);
+font-size: 1.4rem;
+}
+
+.action-label {
+font-family: ‘JetBrains Mono’, monospace;
+font-size: 0.7rem;
+letter-spacing: 0.3em;
+text-transform: uppercase;
+color: var(–gold);
+margin-bottom: 0.8rem;
+}
+
+.action-box h3 {
+color: var(–paper);
+border: none;
+padding: 0;
+margin-top: 0;
+}
+
+.action-box p {
+color: var(–paper-warm);
+margin-bottom: 0.5rem;
+}
+
+/* === Pull quote === */
+.pull-quote {
+margin: 4rem 0;
+padding: 2rem 0;
+border-top: 1px solid var(–rule);
+border-bottom: 1px solid var(–rule);
+text-align: center;
+position: relative;
+}
+
+.pull-quote::before {
+content: “❝”;
+display: block;
+font-family: ‘Cormorant Garamond’, serif;
+font-size: 4rem;
+color: var(–gold);
+line-height: 0.5;
+margin-bottom: 1rem;
+}
+
+.pull-quote p {
+font-family: ‘Cormorant Garamond’, serif;
+font-style: italic;
+font-size: 1.6rem;
+line-height: 1.5;
+color: var(–forest-deep);
+max-width: 800px;
+margin: 0 auto;
+}
+
+/* === Two col === */
+.two-col {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 2rem;
+margin: 2rem 0;
+}
+
+@media (max-width: 768px) {
+.two-col {
+grid-template-columns: 1fr;
+}
+}
+
+.col-card {
+padding: 1.8rem;
+background: var(–paper-warm);
+border-top: 3px solid var(–gold);
+}
+
+.col-card.opposing {
+border-top-color: var(–crimson);
+}
+
+/* === Cheat sheet === */
+.cheatsheet {
+margin: 3rem 0;
+background: linear-gradient(135deg, var(–paper-warm) 0%, var(–paper-deep) 100%);
+padding: 2.5rem;
+border: 1px solid var(–rule);
+position: relative;
+}
+
+.cheatsheet h3 {
+border: none;
+padding: 0;
+margin-bottom: 1.5rem;
+color: var(–forest-deep);
+}
+
+/* === Disclaimer === */
+.disclaimer {
+margin: 5rem 0 2rem;
+padding: 2rem;
+background: var(–paper-deep);
+border-left: 3px solid var(–crimson);
+font-size: 0.85rem;
+color: var(–ink-soft);
+line-height: 1.7;
+}
+
+.disclaimer-label {
+font-family: ‘JetBrains Mono’, monospace;
+font-size: 0.7rem;
+letter-spacing: 0.3em;
+text-transform: uppercase;
+color: var(–crimson);
+margin-bottom: 0.8rem;
+font-weight: 600;
+}
+
+/* === Footer === */
+footer {
+margin-top: 6rem;
+padding: 3rem 0 4rem;
+border-top: 3px double var(–ink);
+text-align: center;
+}
+
+.footer-ornament {
+color: var(–gold);
+font-size: 1.5rem;
+letter-spacing: 1rem;
+margin: 1.5rem 0;
+}
+
+footer .firm {
+font-family: ‘Cormorant Garamond’, serif;
+font-style: italic;
+font-size: 1.6rem;
+color: var(–forest-deep);
+margin-bottom: 0.3rem;
+letter-spacing: 0.02em;
+}
+
+.footer-divider {
+width: 60px;
+height: 1px;
+background: var(–gold);
+margin: 1.8rem auto;
+opacity: 0.6;
+}
+
+.principal {
+margin-bottom: 2rem;
+}
+
+.principal-name {
+font-family: ‘Noto Serif SC’, serif;
+font-size: 1.15rem;
+font-weight: 600;
+color: var(–forest-deep);
+margin-bottom: 0.3rem;
+}
+
+.principal-name .creds {
+font-family: ‘Cormorant Garamond’, serif;
+font-style: italic;
+font-weight: 500;
+color: var(–gold-deep);
+font-size: 0.9em;
+letter-spacing: 0.05em;
+}
+
+.principal-title {
+font-family: ‘Cormorant Garamond’, serif;
+font-style: italic;
+font-size: 1rem;
+color: var(–ink-soft);
+letter-spacing: 0.02em;
+}
+
+.contact-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+gap: 1.5rem 2.5rem;
+max-width: 720px;
+margin: 0 auto 2rem;
+padding: 1.5rem 0;
+border-top: 1px solid var(–rule-soft);
+border-bottom: 1px solid var(–rule-soft);
+}
+
+.contact-block {
+text-align: center;
+}
+
+.contact-label {
+font-family: ‘JetBrains Mono’, monospace;
+font-size: 0.65rem;
+letter-spacing: 0.25em;
+text-transform: uppercase;
+color: var(–gold-deep);
+margin-bottom: 0.4rem;
+}
+
+.contact-block p {
+font-family: ‘Noto Serif SC’, serif;
+font-size: 0.92rem;
+color: var(–ink);
+margin: 0;
+line-height: 1.4;
+word-break: break-word;
+}
+
+.contact-block a {
+color: var(–ink);
+text-decoration: none;
+transition: color 0.3s ease;
+border-bottom: 1px dotted var(–rule);
+padding-bottom: 1px;
+}
+
+.contact-block a:hover {
+color: var(–crimson);
+border-bottom-color: var(–crimson);
+}
+
+.address {
+font-family: ‘Cormorant Garamond’, serif;
+font-style: italic;
+font-size: 1.05rem;
+color: var(–ink-soft);
+margin-bottom: 1.5rem;
+letter-spacing: 0.03em;
+}
+
+footer .meta {
+font-family: ‘JetBrains Mono’, monospace;
+font-size: 0.7rem;
+letter-spacing: 0.2em;
+color: var(–ink-soft);
+text-transform: uppercase;
+opacity: 0.7;
+}
+
+/* === Animations === */
+@keyframes fadeUp {
+from {
+opacity: 0;
+transform: translateY(20px);
+}
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+
+section, .hero-callout, .bucket, .example, .comparison, .action-box, .pull-quote, .cheatsheet {
+animation: fadeUp 0.8s ease backwards;
+}
+
+section:nth-child(2) { animation-delay: 0.1s; }
+section:nth-child(3) { animation-delay: 0.2s; }
+
+/* === Responsive === */
+@media (max-width: 768px) {
+.page {
+padding: 0 6vw;
+}
+
+```
+.masthead-top {
+  flex-direction: column;
+  gap: 0.8rem;
+  font-size: 0.65rem;
+}
+
+.hero-callout {
+  padding: 2rem 1.5rem;
+}
+
+.hero-callout p {
+  font-size: 1.15rem;
+}
+
+.section-number {
+  font-size: 3.5rem;
+}
+
+.example {
+  padding: 1.5rem 1.2rem;
+}
+
+table {
+  font-size: 0.85rem;
+}
+
+th, td {
+  padding: 0.7rem 0.5rem;
+}
+```
+
+}
+
+/* === Print === */
+@media print {
+body::before, body::after {
+display: none;
+}
+.bucket:hover {
+transform: none;
+}
+}
+</style>
+
+</head>
+<body>
+
+<!-- === WATERMARK === -->
+
+<div class="watermark" aria-hidden="true">
+  <div class="watermark-grid">
+    <div class="watermark-text">SML Bookkeeping <span class="dot">·</span> Tax</div>
+    <div class="watermark-text">Maybell Sun <span class="dot">·</span> FCPA</div>
+    <div class="watermark-text">SML Bookkeeping <span class="dot">·</span> Tax</div>
+    <div class="watermark-text">Confidential <span class="dot">·</span> 2026</div>
+    <div class="watermark-text">SML Bookkeeping <span class="dot">·</span> Tax</div>
+    <div class="watermark-text">Maybell Sun <span class="dot">·</span> FCPA</div>
+    <div class="watermark-text">SML Bookkeeping <span class="dot">·</span> Tax</div>
+    <div class="watermark-text">Confidential <span class="dot">·</span> 2026</div>
+    <div class="watermark-text">SML Bookkeeping <span class="dot">·</span> Tax</div>
+    <div class="watermark-text">Maybell Sun <span class="dot">·</span> FCPA</div>
+    <div class="watermark-text">SML Bookkeeping <span class="dot">·</span> Tax</div>
+    <div class="watermark-text">Confidential <span class="dot">·</span> 2026</div>
+    <div class="watermark-text">SML Bookkeeping <span class="dot">·</span> Tax</div>
+    <div class="watermark-text">Maybell Sun <span class="dot">·</span> FCPA</div>
+    <div class="watermark-text">SML Bookkeeping <span class="dot">·</span> Tax</div>
+    <div class="watermark-text">Confidential <span class="dot">·</span> 2026</div>
+    <div class="watermark-text">SML Bookkeeping <span class="dot">·</span> Tax</div>
+    <div class="watermark-text">Maybell Sun <span class="dot">·</span> FCPA</div>
+    <div class="watermark-text">SML Bookkeeping <span class="dot">·</span> Tax</div>
+    <div class="watermark-text">Confidential <span class="dot">·</span> 2026</div>
+    <div class="watermark-text">SML Bookkeeping <span class="dot">·</span> Tax</div>
+    <div class="watermark-text">Maybell Sun <span class="dot">·</span> FCPA</div>
+    <div class="watermark-text">SML Bookkeeping <span class="dot">·</span> Tax</div>
+    <div class="watermark-text">Confidential <span class="dot">·</span> 2026</div>
+    <div class="watermark-text">SML Bookkeeping <span class="dot">·</span> Tax</div>
+    <div class="watermark-text">Maybell Sun <span class="dot">·</span> FCPA</div>
+    <div class="watermark-text">SML Bookkeeping <span class="dot">·</span> Tax</div>
+    <div class="watermark-text">Confidential <span class="dot">·</span> 2026</div>
+    <div class="watermark-text">SML Bookkeeping <span class="dot">·</span> Tax</div>
+    <div class="watermark-text">Maybell Sun <span class="dot">·</span> FCPA</div>
+    <div class="watermark-text">SML Bookkeeping <span class="dot">·</span> Tax</div>
+    <div class="watermark-text">Confidential <span class="dot">·</span> 2026</div>
+    <div class="watermark-text">SML Bookkeeping <span class="dot">·</span> Tax</div>
+    <div class="watermark-text">Maybell Sun <span class="dot">·</span> FCPA</div>
+    <div class="watermark-text">SML Bookkeeping <span class="dot">·</span> Tax</div>
+    <div class="watermark-text">Confidential <span class="dot">·</span> 2026</div>
+    <div class="watermark-text">SML Bookkeeping <span class="dot">·</span> Tax</div>
+    <div class="watermark-text">Maybell Sun <span class="dot">·</span> FCPA</div>
+    <div class="watermark-text">SML Bookkeeping <span class="dot">·</span> Tax</div>
+    <div class="watermark-text">Confidential <span class="dot">·</span> 2026</div>
+  </div>
+</div>
+
+<!-- === RUNNING PAGE HEADER === -->
+
+<div class="running-head" aria-hidden="true">
+  <div class="running-head-inner">
+    <div class="rh-left">
+      <span class="rh-firm">SML Bookkeeping &amp; Tax</span>
+      <span class="rh-separator">❦</span>
+      <span class="rh-document">变天 · 税改深度解读 · 2026–27</span>
+    </div>
+    <div class="rh-right">
+      <span class="rh-confidential">Confidential</span>
+      <span class="rh-date">May 2026</span>
+    </div>
+  </div>
+</div>
+
+<div class="page">
+
+  <!-- === MASTHEAD === -->
+
+  <header class="masthead">
+    <div class="masthead-top">
+      <div class="left">
+        <span>Vol. I · No. 01</span>
+        <span class="ornament">❦</span>
+        <span>客户专题简报</span>
+      </div>
+      <div class="right">
+        <span>Established 2026</span>
+        <span class="ornament">❦</span>
+        <span>Melbourne</span>
+      </div>
+    </div>
+
+```
+<div class="title-wrap">
+  <div class="eyebrow">Federal Budget Tax Reform · 2026–27</div>
+  <h1>变天<span class="accent">·</span>税改深度解读</h1>
+  <div class="subtitle-en">A Reckoning for Australian Investors</div>
+</div>
+
+<p class="deck">
+  2026 年 5 月 12 日，澳洲联邦政府公布了 26 年来最大规模的税制改革。
+  负扣税、CGT 折扣、家族信托——三项陪伴中产投资者三十年的"金科玉律"，
+  自 2027 年 7 月 1 日起将被改写。本简报为投资客户深度梳理新规要点、
+  影响范围与应对策略。
+</p>
+```
+
+  </header>
+
+  <!-- === HERO CALLOUT === -->
+
+  <div class="hero-callout">
+    <div class="hero-label">The Headline</div>
+    <p>
+      若您持有投资房、家族信托或长期股权投资，本次预算将<strong>实质性改变</strong>您未来十年的税务规划。
+      最关键的两个时间节点是 <strong>2026 年 5 月 12 日晚 7:30 PM AEST</strong>（既有资产 grandfathering 截止）
+      与 <strong>2027 年 7 月 1 日</strong>（新规生效）。
+    </p>
+  </div>
+
+  <!-- === TOC === -->
+
+  <nav class="toc">
+    <div class="toc-label">In This Briefing · 本期目录</div>
+    <div class="toc-grid">
+      <a href="#sec1" class="toc-item">
+        <span class="toc-num">i</span>
+        <span class="toc-title">负扣税改革：四桶分类法</span>
+      </a>
+      <a href="#sec2" class="toc-item">
+        <span class="toc-num">ii</span>
+        <span class="toc-title">CGT 折扣的根本性重构</span>
+      </a>
+      <a href="#sec3" class="toc-item">
+        <span class="toc-num">iii</span>
+        <span class="toc-title">家族信托：30% 最低税与退出窗口</span>
+      </a>
+      <a href="#sec4" class="toc-item">
+        <span class="toc-num">iv</span>
+        <span class="toc-title">个人所得税：减税与抵扣新政</span>
+      </a>
+      <a href="#sec5" class="toc-item">
+        <span class="toc-num">v</span>
+        <span class="toc-title">中小企业：永久 IAWO 与亏损前移</span>
+      </a>
+      <a href="#sec6" class="toc-item">
+        <span class="toc-num">vi</span>
+        <span class="toc-title">资产估值：为何 2027 年是关键年</span>
+      </a>
+      <a href="#sec7" class="toc-item">
+        <span class="toc-num">vii</span>
+        <span class="toc-title">客户分类应对清单</span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- === SECTION 1: NEGATIVE GEARING === -->
+
+  <section id="sec1">
+    <div class="section-header">
+      <span class="section-number">I</span>
+      <div class="section-tag">Part One · Negative Gearing</div>
+      <h2>
+        负扣税改革：四桶分类法
+        <span class="en">The Four-Bucket Framework</span>
+      </h2>
+    </div>
+
+```
+<p>
+  新规根据房产<strong>购买日期</strong>将投资者分为四类，待遇截然不同。
+  第一桶安然无恙，第四桶反而获益，中间两桶则面临渐进式收紧。
+</p>
+
+<div class="buckets-intro">
+  关键时间节点：<strong>2026 年 5 月 12 日 7:30 PM AEST</strong>，即"预算夜"。
+  在此之前持有或已签合同的房产享受完整 grandfathering 待遇。
+</div>
+
+<div class="buckets-grid">
+  <div class="bucket bucket-1">
+    <div class="bucket-num">Bucket I</div>
+    <div class="bucket-title">既有持有</div>
+    <div class="bucket-date">≤ 2026.05.12 19:30</div>
+    <span class="bucket-status status-safe">完全保留</span>
+    <p>
+      预算夜前已持有或已签合同的所有投资房，<strong>规则不变</strong>。
+      负扣税损失继续可抵任何收入。建议归档 contract of sale、
+      settlement statement 作为 grandfathering 证据。
+    </p>
+  </div>
+
+  <div class="bucket bucket-2">
+    <div class="bucket-num">Bucket II</div>
+    <div class="bucket-title">过渡期购入</div>
+    <div class="bucket-date">2026.05.12 — 2027.06.30</div>
+    <span class="bucket-status status-warn">一年窗口</span>
+    <p>
+      至 2027 年 6 月 30 日前损失可抵任何收入；
+      自 2027 年 7 月 1 日起，<strong>损失仅能 offset 其他投资房收入</strong>，
+      未用部分可结转。需重做现金流压力测试。
+    </p>
+  </div>
+
+  <div class="bucket bucket-3">
+    <div class="bucket-num">Bucket III</div>
+    <div class="bucket-title">established 二手房</div>
+    <div class="bucket-date">≥ 2027.07.01</div>
+    <span class="bucket-status status-alert">大幅收紧</span>
+    <p>
+      2027 年 7 月 1 日后买的二手住宅房，
+      <strong>损失仅能 offset 其他住宅投资房收入</strong>，
+      不能抵工资。华人投资者偏爱的学区二手房将受最大冲击。
+    </p>
+  </div>
+
+  <div class="bucket bucket-4">
+    <div class="bucket-num">Bucket IV</div>
+    <div class="bucket-title">new build 新建房</div>
+    <div class="bucket-date">≥ 2027.07.01</div>
+    <span class="bucket-status status-opp">完整保留</span>
+    <p>
+      空地建房、楼花、knock-down rebuild 增加 dwelling 数。
+      <strong>完整保留 negative gearing 权益</strong>。
+      但后续投资者再买即失去 new build 身份。
+    </p>
+  </div>
+</div>
+
+<div class="example">
+  <span class="example-en">Brighton Investment Scenario</span>
+  <h4>陈先生的两种选择</h4>
+  <p>
+    年薪 $200,000 的陈先生（marginal rate 47%）2027 年 9 月计划投资 $35,000 净损失的住宅房产：
+  </p>
+  <p>
+    <strong>若买二手房（Bucket III）：</strong>$35,000 损失无法抵工资 → 当年退税 $0，仅可结转。<br>
+    <strong>若买楼花（Bucket IV）：</strong>$35,000 × 47% = <strong>$16,450 退税</strong>，每年差距 $16,450。
+  </p>
+  <p>持有 10 年，仅 negative gearing 一项即多省 $164,500。</p>
+</div>
+```
+
+  </section>
+
+  <!-- === SECTION 2: CGT === -->
+
+  <section id="sec2">
+    <div class="section-header">
+      <span class="section-number">II</span>
+      <div class="section-tag">Part Two · Capital Gains Tax</div>
+      <h2>
+        CGT 折扣的根本性重构
+        <span class="en">Inflation Indexation Returns, Minus Half a Discount</span>
+      </h2>
+    </div>
+
+```
+<p>
+  自 1999 年起施行的 <strong>50% CGT 折扣</strong>，对个人、信托、合伙企业一视同仁地取消。
+  新规重回 <em>cost base indexation</em>（成本通胀指数化）+ <strong>30% 最低税</strong>组合。
+  仅"真实"资本利得（gain 超过通胀部分）进入应税额，但有最低税率兜底——
+  这意味着<strong>低通胀、高增长</strong>资产持有人将多交税，
+  <strong>高通胀、慢增长</strong>资产持有人理论上少交税但被 30% min 限制。
+</p>
+
+<div class="comparison">
+  <div class="comparison-header">情境对比 · A Tale of Two Sales</div>
+  <h4>持有 10 年，nominal gain $800,000，年薪 $200,000</h4>
+  <table>
+    <thead>
+      <tr>
+        <th>规则</th>
+        <th>应税利得</th>
+        <th>应交税</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>旧规则（50% discount）</td>
+        <td>$400,000</td>
+        <td>$188,000</td>
+      </tr>
+      <tr class="highlight-row">
+        <td>新规则（indexation + 30% min）</td>
+        <td>$500,000 real / $800,000 nominal</td>
+        <td>$240,000</td>
+      </tr>
+      <tr>
+        <td colspan="2"><strong>多交税</strong></td>
+        <td><strong style="color: var(--crimson);">$52,000</strong></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="two-col">
+  <div class="col-card">
+    <h4>少数受益群体</h4>
+    <p style="font-size: 0.95rem;">
+      长期持有（10–20 年）、增长缓慢、跨高通胀期的资产，
+      <strong>real gain</strong> 远低于 nominal gain，
+      可能受益于 indexation。但 30% 最低税仍是天花板。
+    </p>
+  </div>
+  <div class="col-card opposing">
+    <h4>普遍受冲击</h4>
+    <p style="font-size: 0.95rem;">
+      短期持有、快速增长、低通胀期的资产，
+      <strong>real gain ≈ nominal gain</strong>，
+      完全失去 50% 折扣保护。Brighton 等高增长区域物业首当其冲。
+    </p>
+  </div>
+</div>
+
+<div class="action-box">
+  <div class="action-label">投资新建房的特权 · A Loophole Worth Knowing</div>
+  <h3>Bucket IV 持有人可二选一</h3>
+  <p>
+    2027 年 7 月 1 日后购入的 <em>new build</em> 住宅，
+    卖出时可在 <strong>50% discount</strong> 与 <strong>新规则</strong> 之间择优。
+    这是 CGT 改革中给新建房的额外政策红利，与负扣税豁免形成双重优势。
+  </p>
+</div>
+
+<p>
+  <strong>分水岭原则：</strong>所有改革仅适用于 <strong>2027 年 7 月 1 日之后产生的 gain</strong>。
+  此前累积的 gain 仍享 50% discount。Pre-1985 资产在 2027 年 7 月 1 日前的 gain 仍免税。
+  这意味着 hybrid 期资产需要<strong>分水岭日估值</strong>——
+  详见本简报第六部分。
+</p>
+```
+
+  </section>
+
+  <!-- === SECTION 3: TRUST === -->
+
+  <section id="sec3">
+    <div class="section-header">
+      <span class="section-number">III</span>
+      <div class="section-tag">Part Three · Discretionary Trusts</div>
+      <h2>
+        家族信托：30% 最低税与退出窗口
+        <span class="en">The End of Income Splitting As We Know It</span>
+      </h2>
+    </div>
+
+```
+<p>
+  自 2028 年 7 月 1 日起，<strong>discretionary trust 分配将适用 30% 最低税率</strong>。
+  多年来华人家庭利用"分配给低税率家人"实现 income splitting 的核心策略，
+  被一刀切的最低税封顶。
+</p>
+
+<h3>例外豁免 · The Exemptions</h3>
+
+<div class="two-col">
+  <div class="col-card">
+    <h4>领养老金家人豁免</h4>
+    <p style="font-size: 0.95rem;">
+      Income support recipients（含 Age Pension、Disability Support Pension 等）
+      分配收入<strong>继续按个人 marginal rate</strong> 缴税。
+      家中有退休父母领养老金的家庭仍可保留部分 income splitting 优势——
+      但要注意 Centrelink income test 影响。
+    </p>
+  </div>
+  <div class="col-card">
+    <h4>小生意 CGT 优惠保留</h4>
+    <p style="font-size: 0.95rem;">
+      Division 152 小生意 CGT 四大优惠（15-year exemption、
+      50% active asset reduction、retirement exemption、rollover）
+      <strong>完整保留</strong>。计划退休卖生意的客户仍享原有保护。
+    </p>
+  </div>
+</div>
+
+<div class="example">
+  <span class="example-en">The Wang Family Scenario</span>
+  <h4>王家信托：旧规 vs 新规</h4>
+  <p>
+    家族信托每年盈利 $300,000，分配给：丈夫 $80k（自有工资 $200k）、
+    妻子 $80k（在家无收入）、读书儿子 $40k、领养老金母亲 $30k、
+    留存 $70k。
+  </p>
+  <p>
+    <strong>2027–28 旧规则：</strong>总税约 $50,000<br>
+    <strong>2028–29 新规则（不重组）：</strong>多交约 <strong style="color: var(--crimson);">$18,000/年</strong>
+  </p>
+</div>
+
+<div class="action-box">
+  <div class="action-label">黄金窗口 · A Three-Year Gateway</div>
+  <h3>2027.07.01 — 2030.06.30 重组期</h3>
+  <p>
+    三年内可享 <strong>CGT + income tax rollover relief</strong>，
+    将 trust 重组为 Pty Ltd 公司架构而<strong>不触发任何应税事件</strong>。
+  </p>
+  <p>
+    重组到公司架构后，按 25% 公司税（base rate entity）+ <strong>franking credits</strong> 系统分配 dividend，
+    妻子等低收入家人通过 imputation credits 可实现<em>有效税率低于 30%</em>，
+    甚至获得 ATO 现金退税。
+  </p>
+  <p style="margin-top: 1rem;">
+    <strong style="color: var(--gold);">关键警示：</strong>
+    若错过此窗口，2030 年 7 月后再重组将一次性触发所有 unrealised gain 的 CGT，
+    典型中型家族信托可能面临 <strong>$200,000+</strong> 立即应税。
+  </p>
+</div>
+
+<div class="pull-quote">
+  <p>
+    Trust 不是越早重组越好。<br>
+    是否重组、何时重组、如何重组——<br>
+    取决于资产构成、家庭成员、退休规划的三方权衡。
+  </p>
+</div>
+```
+
+  </section>
+
+  <!-- === SECTION 4: INDIVIDUAL TAX === -->
+
+  <section id="sec4">
+    <div class="section-header">
+      <span class="section-number">IV</span>
+      <div class="section-tag">Part Four · Personal Income Tax</div>
+      <h2>
+        个人所得税：减税与抵扣新政
+        <span class="en">Sweeteners for the Wage Earner</span>
+      </h2>
+    </div>
+
+```
+<p>
+  与上述三项重大改革形成对比，个人所得税层面为<strong>普遍利好</strong>。
+  三项变化值得关注：第二档税率下调、$250 永久性 WATO、$1,000 免凭证抵扣。
+</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>政策</th>
+      <th>生效日期</th>
+      <th>核心利好</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>第二档税率 16% → 15%</strong></td>
+      <td>2026.07.01</td>
+      <td>每人最高节税 $268/年（已立法）</td>
+    </tr>
+    <tr>
+      <td><strong>Working Australians Tax Offset</strong></td>
+      <td>2027–28 财年起</td>
+      <td>1300 万工人最高 $250 永久抵免</td>
+    </tr>
+    <tr>
+      <td><strong>$1,000 Instant Tax Deduction</strong></td>
+      <td>2026–27 财年起</td>
+      <td>免凭证抵扣，简化报税</td>
+    </tr>
+    <tr>
+      <td><strong>Medicare Levy 低收入门槛</strong></td>
+      <td>2025–26 财年起</td>
+      <td>门槛上调 2.9%，惠及百万低收入者</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>$1,000 Instant Deduction 的隐藏价值</h3>
+
+<p>
+  自 2026–27 财年起，雇员与 sole trader 可在<strong>不保留收据</strong>的情况下，
+  claim 最多 $1,000 工作相关支出。但与传统 substantiated deduction <strong>二选一</strong>。
+</p>
+
+<div class="example">
+  <span class="example-en">Two Profiles</span>
+  <h4>谁是真正的受益者</h4>
+  <p>
+    <strong>护士小林：</strong>原本一年只 claim $200 工作支出。
+    新规下自动获 $1,000 deduction，多 $800 × 32.5% = <strong>$260 额外退税</strong>，
+    无需任何收据。
+  </p>
+  <p>
+    <strong>会计师陈女士：</strong>原本一年 claim $3,500（家庭办公、专业课程）。
+    继续按传统方式 substantiated claim，
+    $1,000 instant deduction 用不上，<strong>无新增利益</strong>。
+  </p>
+</div>
+```
+
+  </section>
+
+  <!-- === SECTION 5: BUSINESS === -->
+
+  <section id="sec5">
+    <div class="section-header">
+      <span class="section-number">V</span>
+      <div class="section-tag">Part Five · Small Business</div>
+      <h2>
+        中小企业：永久 IAWO 与亏损前移
+        <span class="en">Permanent Write-Offs and Loss Carry-Back</span>
+      </h2>
+    </div>
+
+```
+<h3>$20,000 即时抵扣永久化</h3>
+
+<p>
+  营业额 $1,000 万以下的小生意可<strong>永久</strong>即时抵扣单件低于 $20,000 的资产。
+  告别每年看预算续命，规划确定性大幅提升。
+</p>
+
+<div class="example">
+  <span class="example-en">Café Espresso</span>
+  <h4>咖啡店设备采购</h4>
+  <p>
+    年营业额 $80 万的咖啡店 2026 年 8 月采购 $18,000 商用咖啡机：
+    当年全额抵扣 → taxable income 减少 $18,000 → 公司税 25%
+    → <strong>当年省现金税 $4,500</strong>。
+  </p>
+</div>
+
+<h3>Loss Carry-Back：亏损前移退现金</h3>
+
+<p>
+  营业额 $10 亿以下公司可将当年亏损<strong>前移至前 2 年已纳税款</strong>，
+  申请现金退税。约 85,000 家公司直接受益。
+</p>
+
+<div class="example">
+  <span class="example-en">Retail Pty Ltd</span>
+  <h4>零售公司的现金流救命</h4>
+  <p>
+    某零售客户 2024–25 财年盈利 $200,000、已交税 $50,000。
+    2026–27 因经济下行亏损 $150,000：
+  </p>
+  <p>
+    <strong>旧规则：</strong>亏损结转到未来盈利年度才能抵扣<br>
+    <strong>新规则：</strong>$150,000 carry back 至 2024–25 → <strong>立即拿到 $37,500 现金退税</strong>
+  </p>
+</div>
+```
+
+  </section>
+
+  <!-- === SECTION 6: VALUATION === -->
+
+  <section id="sec6">
+    <div class="section-header">
+      <span class="section-number">VI</span>
+      <div class="section-tag">Part Six · The Valuation Imperative</div>
+      <h2>
+        资产估值：为何 2027 年是关键年
+        <span class="en">Why July 1st 2027 Demands a Valuation</span>
+      </h2>
+    </div>
+
+```
+<p>
+  由于 CGT 改革仅适用于 <strong>2027 年 7 月 1 日之后</strong>产生的 gain，
+  此前持有的资产将经历 <em>hybrid</em> 处理——
+  分水岭日前累积的 gain 享 50% discount，之后的 gain 走新规则。
+  这意味着：<strong>2027 年 7 月 1 日必须确立资产的市场价值</strong>。
+</p>
+
+<div class="comparison">
+  <div class="comparison-header">合规要求 · ATO Compliance</div>
+  <table>
+    <thead>
+      <tr>
+        <th>资产类型</th>
+        <th>估值要求</th>
+        <th>典型费用 (ex GST)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>住宅投资房</td>
+        <td>CPV / API 注册估价师</td>
+        <td>$800 – $2,500</td>
+      </tr>
+      <tr>
+        <td>商业 / 工业物业</td>
+        <td>商业估价专长 CPV</td>
+        <td>$2,500 – $5,000</td>
+      </tr>
+      <tr>
+        <td>生意股权</td>
+        <td>Business valuer / CBV</td>
+        <td>$5,000 – $15,000+</td>
+      </tr>
+      <tr>
+        <td>上市股票</td>
+        <td>无需估值（用收盘价）</td>
+        <td>—</td>
+      </tr>
+      <tr>
+        <td>非上市股权</td>
+        <td>Business valuer</td>
+        <td>$3,000 – $8,000</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="action-box">
+  <div class="action-label">关键提示 · A Word on Quality</div>
+  <h3>ATO 不接受的"估值"</h3>
+  <p>
+    <strong>中介 appraisal、银行估值、自己估算</strong>均不被 ATO 接受。
+    必须由持有 <strong>CPV (Certified Practising Valuer)</strong>、
+    <strong>API</strong> 或 <strong>RICS</strong> 资质的独立估价师出具，
+    报告须明确标注"<em>for CGT purposes</em>"。
+  </p>
+  <p>估值费用<strong>可加入 cost base</strong>，未来卖出时间接减税。</p>
+</div>
+```
+
+  </section>
+
+  <!-- === SECTION 7: CHEAT SHEET === -->
+
+  <section id="sec7">
+    <div class="section-header">
+      <span class="section-number">VII</span>
+      <div class="section-tag">Part Seven · Action Plan</div>
+      <h2>
+        客户分类应对清单
+        <span class="en">A Client Triage Framework</span>
+      </h2>
+    </div>
+
+```
+<p>
+  并非所有客户都需要立即行动。
+  下表按客户类型梳理优先级与建议步骤——
+  建议您与我们预约 30 分钟初步咨询，明确所属类别。
+</p>
+
+<div class="cheatsheet">
+  <table>
+    <thead>
+      <tr>
+        <th>客户画像</th>
+        <th>关键影响</th>
+        <th>立即行动</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>已持有投资房（grandfathered）</td>
+        <td>零影响</td>
+        <td>归档 contract / settlement 证据</td>
+      </tr>
+      <tr>
+        <td>2026–27 内打算购买二手房</td>
+        <td>Bucket II 一年窗口</td>
+        <td>2027 年现金流压力测试</td>
+      </tr>
+      <tr class="highlight-row">
+        <td>长期投资者，2027 年后入市</td>
+        <td>策略需根本转向</td>
+        <td>评估 new build / 楼花路径</td>
+      </tr>
+      <tr>
+        <td>高 gain 老物业持有者</td>
+        <td>2027 年 7 月后卖更贵</td>
+        <td>评估是否提前 realise gain</td>
+      </tr>
+      <tr class="highlight-row">
+        <td>Family trust 使用者</td>
+        <td>30% 最低税杀招</td>
+        <td>利用 3 年 rollover 窗口评估重组</td>
+      </tr>
+      <tr>
+        <td>小生意 + 设备投资</td>
+        <td>IAWO 永久利好</td>
+        <td>规划 $20k 单件资产时机</td>
+      </tr>
+      <tr>
+        <td>工薪族（支出 &lt; $1,000）</td>
+        <td>Instant deduction 利好</td>
+        <td>2026–27 报税自动多 $200–300 退税</td>
+      </tr>
+      <tr>
+        <td>跨境家庭（受益人在海外）</td>
+        <td>极度复杂</td>
+        <td>专项 CRS / 税务协定评估</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="pull-quote">
+  <p>
+    税法的变迁不在条文，而在时间。<br>
+    预算夜、2027 年 7 月、2028 年 7 月、2030 年 6 月——<br>
+    每一个节点都是一次机会，也是一道门槛。
+  </p>
+</div>
+```
+
+  </section>
+
+  <!-- === DISCLAIMER === -->
+
+  <div class="disclaimer">
+    <div class="disclaimer-label">Important Disclaimer · 重要声明</div>
+    <p>
+      本简报为概要性信息，根据 2026 年 5 月 12 日联邦预算公布资料整理，
+      不构成针对任何个人或实体的税务、法律或投资建议。
+      实际税务影响因个人情况而异，建议在采取任何行动前与我们预约一对一咨询。
+      部分政策细则尚待立法落地，相关数字与日期可能随后续条文调整。
+      过往业绩或案例数字仅供说明之用，不保证未来结果。
+    </p>
+  </div>
+
+  <!-- === FOOTER === -->
+
+  <footer>
+    <div class="footer-ornament">❦ · ❦ · ❦</div>
+    <p class="firm">SML Bookkeeping &amp; Tax</p>
+
+```
+<div class="footer-divider"></div>
+
+<div class="principal">
+  <p class="principal-name">Maybell Sun, <span class="creds">FCPA</span></p>
+  <p class="principal-title">Registered Tax Agent · Principal Accountant</p>
+</div>
+
+<div class="contact-grid">
+  <div class="contact-block">
+    <div class="contact-label">Office</div>
+    <p>(03) 9191 3731</p>
+  </div>
+  <div class="contact-block">
+    <div class="contact-label">Mobile</div>
+    <p>0433 408 886</p>
+  </div>
+  <div class="contact-block">
+    <div class="contact-label">Email</div>
+    <p><a href="mailto:maybell@smlbookkeeping.com.au">maybell@smlbookkeeping.com.au</a></p>
+  </div>
+  <div class="contact-block">
+    <div class="contact-label">Web</div>
+    <p><a href="https://www.smlbookkeeping.com.au" target="_blank" rel="noopener">www.smlbookkeeping.com.au</a></p>
+  </div>
+</div>
+
+<p class="address">1341 Dandenong Road · Chadstone · Victoria 3148</p>
+
+<p class="meta">Melbourne · 2026</p>
+```
+
+  </footer>
+
+</div>
+
+</body>
+</html>
